@@ -1,0 +1,2 @@
+module NimblesHelper
+end

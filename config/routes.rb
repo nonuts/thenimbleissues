@@ -1,4 +1,6 @@
 Nimblepieces::Application.routes.draw do
+  resources :nimbles
+
   resources :artists
 
   # The priority is based upon order of creation:
