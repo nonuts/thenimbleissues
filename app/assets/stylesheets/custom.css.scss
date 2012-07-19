@@ -27,8 +27,9 @@ textarea {
   background: transparent url(asset_path('intro.jpg', 'images')) top right no-repeat;
   padding: 60px 0;
   h1, h2 {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     text-align: left;
+    width: 70%;
   }
 }
 
