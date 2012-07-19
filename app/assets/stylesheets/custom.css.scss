@@ -23,9 +23,12 @@ textarea {
 }
 
 .center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
+  text-align: right;
+  background: transparent url(asset_path('intro.jpg', 'images')) top right no-repeat;
+  padding: 60px 0;
+  h1, h2 {
+    margin-bottom: 100px;
+    text-align: left;
   }
 }
 
