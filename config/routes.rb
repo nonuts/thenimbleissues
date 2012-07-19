@@ -4,7 +4,7 @@ Nimblepieces::Application.routes.draw do
   
   match '/signup', :to => 'static_pages#signup'
   
-  match '/help', :to => 'static_pages#help'
+  match '/about', :to => 'static_pages#about'
 
   match '/contact', :to => 'static_pages#contact'
   
