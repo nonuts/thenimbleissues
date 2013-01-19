@@ -1,0 +1,108 @@
+/*styles for web-clippings of The Nimble Mag */
+/* line 7, web.css.sass */
+body {
+  background: #eeeeee; }
+
+/* line 10, web.css.sass */
+h3 {
+  font-size: 0.8em; }
+
+/* line 13, web.css.sass */
+a:hover {
+  text-decoration: underline; }
+
+/* line 16, web.css.sass */
+#teaser {
+  padding: 20px 0 0;
+  border-bottom: 1px dotted #333333; }
+  /* line 19, web.css.sass */
+  #teaser .float-right {
+    padding-top: 30px; }
+  /* line 21, web.css.sass */
+  #teaser h1 {
+    -webkit-animation-name: buzz;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 0s; }
+  /* line 30, web.css.sass */
+  #teaser a {
+    text-decoration: none;
+    border: none; }
+
+/* line 35, web.css.sass */
+#footer {
+  font-size: 0.7em;
+  border-top: 1px dotted #999999;
+  margin-top: 20px; }
+
+/* line 39, web.css.sass */
+.getapp {
+  color: #999999;
+  font-size: 0.9em; }
+  /* line 42, web.css.sass */
+  .getapp a {
+    text-decoration: none;
+    margin-top: 20px;
+    border: none;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline; }
+
+/* line 47, web.css.sass */
+#app-store-badge {
+  width: auto; }
+
+@-webkit-keyframes buzz {
+  /* line 51, web.css.sass */
+  0% {
+    -webkit-filter: blur(4px) opacity(0.5);
+    -moz-filter: blur(4px) opacity(0.5);
+    filter: blur(4px) opacity(0.5); }
+
+  /* line 53, web.css.sass */
+  48% {
+    -webkit-filter: blur(1px) opacity(0.5);
+    -moz-filter: blur(1px) opacity(0.5);
+    filter: blur(1px) opacity(0.5); }
+
+  /* line 55, web.css.sass */
+  50% {
+    -webkit-filter: blur(2px) opacity(0.5);
+    -moz-filter: blur(2px) opacity(0.5);
+    filter: blur(2px) opacity(0.5); }
+
+  /* line 57, web.css.sass */
+  94% {
+    -webkit-filter: blur(1px) opacity(0.5);
+    -moz-filter: blur(1px) opacity(0.5);
+    filter: blur(1px) opacity(0.5); }
+
+  /* line 59, web.css.sass */
+  96% {
+    -webkit-filter: blur(10px) opacity(0.5);
+    -moz-filter: blur(10px) opacity(0.5);
+    filter: blur(10px) opacity(0.5); }
+
+  /* line 61, web.css.sass */
+  98% {
+    -webkit-filter: blur(0px) opacity(1);
+    -moz-filter: blur(0px) opacity(1);
+    filter: blur(0px) opacity(1); }
+
+  /* line 63, web.css.sass */
+  99% {
+    -webkit-filter: blur(10px) opacity(0.5);
+    -moz-filter: blur(10px) opacity(0.5);
+    filter: blur(10px) opacity(0.5); }
+
+  /* line 65, web.css.sass */
+  100% {
+    -webkit-filter: blur(0px) opacity(1);
+    -moz-filter: blur(0px) opacity(1);
+    filter: blur(0px) opacity(1); } }

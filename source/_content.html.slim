@@ -1,0 +1,47 @@
+- content_for(:hide_nav, "yes")
+
+
+ul#content.overthrow
+  li.issue
+    - if on_web == true
+      h2
+        | 001:Data vs. Stuff
+    -else
+      h3
+        == link_to '001: Data vs. Stuff', '001-content.html'
+  li
+    a href="#{issue_path ? issue_path : ''}001-editorial#{on_web == true ? '-short' : ''}.html"
+      h4
+        | Editorial
+      p
+        | What I tell my ma about this
+
+  li
+    a href="#{issue_path ? issue_path : ''}001-portrait#{on_web == true ? '-short' : ''}.html"
+      h4
+        | The Art Of Paul Vera-Broadbent
+      p
+        | Beautiful meshed artwork, handcrafted on the iPad.
+  li
+    a href="#{issue_path ? issue_path : ''}001-opener#{on_web == true ? '-short' : ''}.html"
+      h4
+        | I hate digital
+      p
+        | How data slowly becomes a new material for painters
+  li
+    a href="#{issue_path ? issue_path : ''}001-painting#{on_web == true ? '-short' : ''}.html"
+      h4
+        | Got 15 mins? The chromatic technique
+      p
+        | A simple video-walkthrough on how to create quick and atmospheric sketches.
+  li
+    a href="#{issue_path ? issue_path : ''}001-gear#{on_web == true ? '-short' : ''}.html"
+      h4
+        | Gear: The new pogo connect
+      p
+        | Pressure sensitivity gets real and fun.
+  li.issue
+    - unless on_web == true
+      h3
+        == link_to '001-next.html' do
+          | 002: Something is missing

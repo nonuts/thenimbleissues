@@ -1,0 +1,14 @@
+doctype 5
+html
+  head
+    title The Nimble Mag - Issue 001 
+    meta charset="utf-8"
+    meta content="on" http-equiv="cleartype"
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    == stylesheet_link_tag 'less/main-16px', 'laker/styles', 'style', 'web'
+  body#web
+    == yield
+    == partial 'footer'
+

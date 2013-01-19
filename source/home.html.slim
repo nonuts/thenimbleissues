@@ -1,0 +1,22 @@
+---
+layout: "web"
+---
+
+
+#teaser.content-element
+  .medium-column.float-left
+    img src="images/web/home-visual.png" 
+  .medium-column.float-right
+    h1 
+      | The Nimble Mag
+    p
+      | A tiny Magazine about Mobile Art, Fluffy Animals, and other Disruptive Culture Stuff. Comes with the occasional orange bunny, too. 
+    p
+      == link_to 'https://itunes.apple.com/us/app/the-nimble-magazine/id590761909?l=de&ls=1&mt=8' do
+        img#app-store-badge src="images/web/Download_on_the_App_Store_Badge_US-UK_135x40.png"
+    <a href="https://twitter.com/TheNimbleMag" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TheNimbleMag</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+.content-element
+  .full-column
+    == partial(:content, :locals => {:on_web => true, :issue_path => '001/'})

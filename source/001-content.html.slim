@@ -1,0 +1,36 @@
+- content_for(:link_back, "#")
+- content_for(:link_forward, "001-editorial.html")
+
+
+
+#logo-title
+  #logo
+    img src="images/logo-inverted.png"
+  
+#content-title.overthrow
+  .content-element
+  
+    .full-column.resizable
+      p.caption
+        i class="icon-fire icon-large" style="color: red; padding-right: 5px"
+        |  in case of fire, double-tap
+      == partial(:content, :locals => {:on_web => false, :issue_path => false})
+  
+    .full-column
+      p.caption#disclaimer
+        |  Cover artwork by 
+        == link_to 'Paul Very-Broadbent', 'http://www.paulverabroadbent.com?referrer=Baker'
+      p.caption
+        | This issue is based on   
+        == link_to 'The Baker Framework', 'http://bakerframework.com?referrer=Baker'
+        | ,  
+        == link_to 'animate', 'http://daneden.me/animate/?referrer=Baker'
+        | ,  
+        == link_to 'The Laker Compendium', 'http://www.lakercompendium.com?referrer=Baker'
+        | ,  
+        == link_to 'Middleman', 'http://www.middlemanapp.com?referrer=Baker'
+        | ,  
+        == link_to 'FontAwesome', 'http://fortawesome.github.com?referrer=Baker'
+        |  and 
+        == link_to 'Google Web Fonts', 'http://www.google.com/webfonts?referrer=Baker'
+        | .

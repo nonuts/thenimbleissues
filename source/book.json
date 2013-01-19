@@ -1,0 +1,28 @@
+{
+    "hpub": 1,
+    "title": "The Nimble Mag",
+    "author": ["Benjamin Rabe"],
+    "creator": ["Benjamin Rabe"],
+    "date": "2011-06-15",
+    "url": "book://bakerframework.com/books/arthurconandoyle-thestudyinscarlet",
+
+    "orientation": "both",
+    "zoomable": false,
+
+    "-baker-background": "#000000",
+    "-baker-vertical-bounce": true,
+    "-baker-media-autoplay": true,
+    "-baker-page-turn-tap": false,
+    "-baker-page-numbers-color": "#000000",
+    "-baker-rendering": "three-cards",
+
+    "contents": [
+        "001-content.html",
+        "001-editorial.html",
+        "001-portrait.html",
+        "001-opener.html",
+        "001-painting.html",
+        "001-gear.html",
+        "001-next.html"
+    ]
+}

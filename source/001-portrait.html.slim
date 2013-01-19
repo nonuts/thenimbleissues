@@ -1,0 +1,95 @@
+- content_for(:link_back, "001-editorial.html")
+- content_for(:link_forward, "001-opener.html")
+
+.content-element.intro.resizable
+	.full-column
+		h2
+			| The Art Of: Paul Vera-Broadbent
+
+	.medium-column.float-left
+		p
+			| Paul Vera Broadbent is an artist and art director in the video game industry. A selection of his work was recently added to the Wall to Wall
+	.medium-column.float-right
+		p
+			|  gallery collection. 
+			== link_to 'Wall to Wall', 'http://walltowallgallery.co.uk?referrer=Baker' 
+			|  is a contemporary art gallery located on the ground floor of Liverpool’s The Metquarter.
+#imgscroll-content
+	#imgscroll-legend
+		p
+			| » Swipe for more pictures 
+	#imgscroll-imgs
+		#imgscroll-img.imgscroll-img
+			img src="images/portrait/piece-001.jpg"
+			.caption
+				p Michael Jordan
+		#imgscroll-img.imgscroll-img
+			img src="images/portrait/piece-002.jpg"
+			.caption
+				p Repin - Barge Haulers On The Volga
+		#imgscroll-img.imgscroll-img
+			img src="images/portrait/piece-003.jpg"
+			.caption
+				p Man on ground
+		#imgscroll-img.imgscroll-img
+			img src="images/portrait/piece-004.jpg"
+			.caption
+				p Portrait of a woman #1
+		#imgscroll-img.imgscroll-img
+			img src="images/portrait/piece-005.jpg"
+			.caption
+				p Stella
+		#imgscroll-img.imgscroll-img
+			img src="images/portrait/piece-006.jpg"
+			.caption
+				p Lindsey Wixson
+		#imgscroll-img.imgscroll-img
+			img src="images/portrait/piece-007.jpg"
+			.caption
+				p Anais Pouliot
+		#imgscroll-img.imgscroll-img
+			img src="images/portrait/piece-008.jpg"
+			.caption
+				p Isaac Levitan - Above the Eternal Tranquility
+
+.content-element.resizable
+	aside.small-column.float-right
+		p
+			| &nbsp;
+	.large-column.float-left
+		p
+			b
+				| Why? 
+			| "I`ve always wanted to create my own art and when I started to use Sketchbook back on my iPod... I knew this was the medium for me. It gave me a chance to learn new skills, drawing figures/portraits and to study other artists techniques."
+	.full-column
+		p
+			b
+				| Where? 
+			| "I only use 
+			== link_to 'Sketchbook Pro', 'http://sketchbook.com?referrer=Baker' 
+			| . I`ve created art on other devices, my iPod, iPhone and now I create everything on my iPad. "
+	.full-column
+		p
+			b
+				| How? 
+			| "I draw most of my work on the sofa at home. I rarely take my device anywhere, I don`t draw in cafes or on the streets or anything like that. I need to be in a relaxing environment so that I can free my mind to draw."
+	.full-column
+		p
+			b
+				| When? 
+			| "Mostly at night... I`m a freelance games artist during the day, so I spend all day creating art for other people. At night I create the art for myself."
+	.full-column
+		p
+			b
+				| Tips? 
+			| "Buy a good stylus! I got sick of the rubber tips tearing and not being responsive."
+
+
+
+p.caption#disclaimer
+	| Pauls work: 
+	== link_to "Web", 'http://www.paulverabroadbent.com?referrer=Baker'
+	| , 
+	== link_to "flickr", 'http://www.flickr.com/photos/pvbroadz/?referrer=Baker'
+
+script src="javascripts/imgscroll.js" type="text/javascript"

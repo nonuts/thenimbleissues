@@ -1,0 +1,65 @@
+/*styles for web-clippings of The Nimble Mag*/
+
+@import "compass/typography/text/replacement"
+@import "compass/css3"
+
+body
+  background: #eee
+
+h3
+  font-size: 0.8em
+
+a:hover
+  text-decoration: underline
+
+#teaser
+  padding: 20px 0 0
+  border-bottom: 1px dotted #333
+  .float-right
+    padding-top: 30px
+  h1
+    //+replace-text-with-dimensions('../images/logo-web.png')
+    -webkit-animation-name: buzz
+    -webkit-animation-duration: 2s
+    -webkit-animation-iteration-count: 1
+    -webkit-animation-direction: alternate
+    -webkit-animation-timing-function: ease-out
+    -webkit-animation-fill-mode: forwards
+    -webkit-animation-delay: 0s
+  a
+    text-decoration: none
+    border: none
+
+
+#footer
+  font-size: 0.7em
+  border-top: 1px dotted #999
+  margin-top: 20px
+.getapp
+  color: #999
+  font-size: 0.9em
+  a
+    text-decoration: none
+    margin-top: 20px
+    border: none
+    +inline-block
+#app-store-badge
+  width: auto
+  
+@-webkit-keyframes buzz
+  0%
+    +filter(blur(4px) opacity(0.5))
+  48%
+    +filter(blur(1px) opacity(0.5))
+  50%
+    +filter(blur(2px) opacity(0.5))
+  94%
+    +filter(blur(1px) opacity(0.5))
+  96%
+    +filter(blur(10px) opacity(0.5))
+  98%
+    +filter(blur(0px) opacity(1))
+  99%
+    +filter(blur(10px) opacity(0.5))
+  100%
+    +filter(blur(0px) opacity(1))

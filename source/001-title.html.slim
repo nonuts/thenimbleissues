@@ -1,0 +1,17 @@
+---
+layout: "title"
+---
+
+- content_for(:nav, "off")
+- content_for(:issue_id, "issue-ff0000")
+- content_for(:link_forward, "001-editorial.html")
+
+.title
+  .overlay
+  h2#issue-counter
+    == link_to 'Issue 001: ', '001-editorial.html'
+    | &nbsp;Data vs. Stuff
+  h1#issue-logo
+    | Nimble
+  p
+    | Mobile Art and other good reads.
