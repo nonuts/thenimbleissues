@@ -5,43 +5,43 @@ ul#content.overthrow
   li.issue
     - if on_web == true
       h2
-        | 001:Data vs. Stuff
+        | 002: Something is missing
     -else
       h3
-        == link_to '001: Data vs. Stuff', '001-content.html'
+        == link_to '002: Something is missing', '001-content.html'
   li
     a href="#{issue_path ? issue_path : ''}001-editorial#{on_web == true ? '-short' : ''}.html"
       h4
         | Editorial
       p
-        | What I tell my ma about this
+        | The quality of emptiness
 
   li
     a href="#{issue_path ? issue_path : ''}001-portrait#{on_web == true ? '-short' : ''}.html"
       h4
-        | The Art Of Paul Vera-Broadbent
+        | The Art Of Mikedia
       p
-        | Beautiful meshed artwork, handcrafted on the iPad.
+        | B/W comics ----
+  li
+    a href="#{issue_path ? issue_path : ''}midday-moon/index#{on_web == true ? '-short' : ''}.html"
+      h4
+        | Midday Moon
+      p
+        | ---
   li
     a href="#{issue_path ? issue_path : ''}001-opener#{on_web == true ? '-short' : ''}.html"
       h4
-        | I hate digital
+        | Unfinished Sympathy
       p
-        | How data slowly becomes a new material for painters
-  li
-    a href="#{issue_path ? issue_path : ''}001-painting#{on_web == true ? '-short' : ''}.html"
-      h4
-        | Got 15 mins? The chromatic technique
-      p
-        | A simple video-walkthrough on how to create quick and atmospheric sketches.
+        | An Image Inspired Imagination by Dirk Bathen
   li
     a href="#{issue_path ? issue_path : ''}001-gear#{on_web == true ? '-short' : ''}.html"
       h4
-        | Gear: The new pogo connect
+        | Gear: ---
       p
-        | Pressure sensitivity gets real and fun.
+        | ---
   li.issue
     - unless on_web == true
       h3
         == link_to '001-next.html' do
-          | 002: Something is missing
+          | 003: ???
