@@ -251,6 +251,11 @@ body#title
   margin: 0
   @media only screen and (max-device-width: 1024px) and (orientation:landscape)
     height: 714px
+body.fixed-poster
+  background: url(../images/story/main.jpg) fixed center top no-repeat
+  background-size: 712px auto
+  @media only screen and (max-device-width: 1024px) and (orientation:landscape)
+    background-size: 892px auto
 
 
 nav
@@ -297,8 +302,9 @@ nav
   padding: 0 $base-gap
   color: lighten($c-spot, 10%)
   &#disclaimer
-    margin-top: 10px
+    padding-top: 10px
     padding-left: 30px
+    background: #fff
 
 .content-element
   &.intro
@@ -312,13 +318,27 @@ nav
   a
     border-color: $c-spot!important
     color: $c-spot
+  .story &
+    +box-shadow(#666 0px 0px 10px inset)
+    .full-column
+      &.full-peek
+        margin-bottom: 20px
+      &.first
+        margin-top: 30px
+        +box-shadow(#666 2px 0px 10px)
+      &.last
+        margin-bottom: 500px
+        +box-shadow(#666 2px 0px 10px)
+    .full-column, .medium-column
+      background: #eee
+      > *
+        padding: 0 20px
+    .large-column
+      background: #eee
+      > *
+        padding: 0 20px
 
-#issue-ff0000
-  background: #fff
-  a
-    color: $c-spot
-    &:visited
-      color: $c-spot
+
 .full-artwork
   +middlefy
   text-align: center
