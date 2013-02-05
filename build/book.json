@@ -9,7 +9,7 @@
     "orientation": "both",
     "zoomable": false,
 
-    "-baker-background": "#000000",
+    "-baker-background": "#ffffff",
     "-baker-vertical-bounce": true,
     "-baker-media-autoplay": true,
     "-baker-page-turn-tap": false,
@@ -17,11 +17,11 @@
     "-baker-rendering": "three-cards",
 
     "contents": [
-        "001-content.html",
-        "001-editorial.html",
-        "001-portrait.html",
-        "001-opener.html",
-        "001-gear.html",
-        "001-next.html"
+        "content.html",
+        "editorial.html",
+        "portrait.html",
+        "story.html",
+        "painting.html",
+        "next.html"
     ]
 }

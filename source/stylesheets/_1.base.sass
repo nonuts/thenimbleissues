@@ -6,7 +6,7 @@
 
 
 $c-base: #fff
-$c-spot: #062834
+$c-spot: #341e06
 $base-gap: 10px
 $nav-height: 34px
 
@@ -44,6 +44,9 @@ body
   -webkit-touch-callout: none
   -webkit-user-select: none
   user-select: none
+  background: #fff url(../images/main-bg.png) fixed top left
+  @media only screen and (max-device-width: 1024px) and (orientation:landscape)
+    background: #fff url(../images/main-bg-landscape.png) fixed top left
 
 h1,
 h2,
@@ -252,7 +255,7 @@ body#title
   @media only screen and (max-device-width: 1024px) and (orientation:landscape)
     height: 714px
 body.fixed-poster
-  background: url(../images/story/main.jpg) fixed center top no-repeat
+  background: #fff url(../images/story/main.jpg) fixed center top no-repeat
   background-size: 712px auto
   @media only screen and (max-device-width: 1024px) and (orientation:landscape)
     background-size: 892px auto
@@ -260,7 +263,7 @@ body.fixed-poster
 
 nav
   background: $c-spot
-  +opacity(0.9)
+  +opacity(1)
   color: $c-base
   border-bottom: 2px solid darken($c-spot, 10%)
   width: 100%
@@ -304,7 +307,9 @@ nav
   &#disclaimer
     padding-top: 10px
     padding-left: 30px
+    padding-bottom: 30px
     background: #fff
+    margin-bottom: 0
 
 .content-element
   &.intro
@@ -319,18 +324,18 @@ nav
     border-color: $c-spot!important
     color: $c-spot
   .story &
-    +box-shadow(#666 0px 0px 10px inset)
+    +box-shadow(#666 0px 0px 5px inset)
     .full-column
       &.full-peek
         margin-bottom: 20px
       &.first
         margin-top: 30px
-        +box-shadow(#666 2px 0px 10px)
+        +box-shadow(#666 2px 0px 5px)
       &.last
         margin-bottom: 500px
-        +box-shadow(#666 2px 0px 10px)
+        +box-shadow(#666 2px 0px 5px)
     .full-column, .medium-column
-      background: #eee
+      background: #fff
       > *
         padding: 0 20px
     .large-column
@@ -431,6 +436,25 @@ nav
       background: rgba(255,255,255,1)
       margin-top: $base-gap
 
+$popover-base-color: #ddd
+
+.info-popover
+  text-decoration: none
+  background: $popover-base-color
+  border: none!important
+  +inline-block
+  padding: 0 5px
+  +border-radius(3px)
+  +box-shadow(rgba(0,0,0,0.5) 0px 0px 2px)
+  margin-top: -2px
+.popover
+  +box-shadow(rgba(0,0,0,0.8) 0px 0px 4px)
+  .arrow
+    border-bottom-color: darken($popover-base-color, 50%)
+  .wrap
+    background: $popover-base-color
+    border-color: darken($popover-base-color, 50%)
+    border-width: 1px
 
 img.title
   width: 100%

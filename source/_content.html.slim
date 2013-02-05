@@ -8,34 +8,35 @@ ul#content.overthrow
         | 002: Something is missing
     -else
       h3
-        == link_to '002: Something is missing', '001-content.html'
+        a href="content.html"
+          | 002: Something is missing
   li
-    a href="#{issue_path ? issue_path : ''}001-editorial#{on_web == true ? '-short' : ''}.html"
+    a href="#{issue_path ? issue_path : ''}editorial#{on_web == true ? '-short' : ''}.html"
       h4
         | Editorial
       p
         | The quality of emptiness
 
   li
-    a href="#{issue_path ? issue_path : ''}001-portrait#{on_web == true ? '-short' : ''}.html"
+    a href="#{issue_path ? issue_path : ''}portrait#{on_web == true ? '-short' : ''}.html"
       h4
         | The Art Of Mikedia
       p
         | A 365 day creativity marathon in B/W
   li
-    a href="#{issue_path ? issue_path : ''}001-opener#{on_web == true ? '-short' : ''}.html"
+    a href="#{issue_path ? issue_path : ''}opener#{on_web == true ? '-short' : ''}.html"
       h4
         | Unfinished Sympathy
       p
         | An Image Inspired Imagination by Dirk Bathen
   li
-    a href="#{issue_path ? issue_path : ''}001-painting#{on_web == true ? '-short' : ''}.html"
+    a href="#{issue_path ? issue_path : ''}painting#{on_web == true ? '-short' : ''}.html"
       h4
-        | New: The Nimble Shoppe
+        | Got 15mins? The Block_In_Method
       p
-        | Want to buy what you see? Now you can!
+        | Learn to paint like a sculptor in this simple video walkthrough
   li.issue
     - unless on_web == true
       h3
-        == link_to '001-next.html' do
+        == link_to 'next.html' do
           | 003: Distortions
