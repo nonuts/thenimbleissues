@@ -1,0 +1,29 @@
+- content_for(:link_back, "story.html")
+- content_for(:link_forward, "next.html")
+
+
+<video id="html5-video" width="100%" height="574px" poster="images/video.jpg" controls>
+  source src="videos/nimble02.m4v" type="video/mp4"
+</video>
+.content-element.resizable
+  .full-column
+    h3
+      | Got 15 mins? The Block_In_Method
+
+  .medium-column.float-left
+    p
+      | I often start my pieces with a sketch and find myself limited later on when I want to apply color. 
+      br
+        | The Block_In_Techniques borrows 
+  .medium-column.float-right
+    p
+      | some ideas from sculpting and let's you refine your piece in a more balanced and itereative way.
+      br
+      | Apps used: 
+      == link_to 'procreate','http://procreate.si?referrer=Baker'
+      | .
+p.caption#disclaimer
+  | Have you got something to share based on this technique? Feel free to add it to The Nimble flickr pool (moderated): 
+  br
+  == link_to 'http://www.flickr.com/groups/the-nimble-magazine', 'http://www.flickr.com/groups/the-nimble-magazine?referrer=Baker'
+script src="javascripts/imgscroll.js" type="text/javascript"

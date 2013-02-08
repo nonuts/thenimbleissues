@@ -20,15 +20,17 @@ ul#content.overthrow
   li
     a href="#{issue_path ? issue_path : ''}portrait#{on_web == true ? '-short' : ''}.html"
       h4
-        | The Art Of Mikedia
+        | The Art Of mikedia
       p
         | A 365 day creativity marathon in B/W
   li
-    a href="#{issue_path ? issue_path : ''}opener#{on_web == true ? '-short' : ''}.html"
+    a href="#{issue_path ? issue_path : ''}story#{on_web == true ? '-short' : ''}.html"
       h4
         | Unfinished Sympathy
       p
-        | An Image Inspired Imagination by Dirk Bathen
+        | An Image-Inspired-Imagination 
+        br
+        | by Dirk Bathen
   li
     a href="#{issue_path ? issue_path : ''}painting#{on_web == true ? '-short' : ''}.html"
       h4
@@ -38,5 +40,5 @@ ul#content.overthrow
   li.issue
     - unless on_web == true
       h3
-        == link_to 'next.html' do
-          | 003: Distortions
+       a href="next.html"
+        | 003: In Pairs

@@ -5,6 +5,7 @@
     "creator": ["Benjamin Rabe"],
     "date": "2011-06-15",
     "url": "book://bakerframework.com/books/arthurconandoyle-thestudyinscarlet",
+    "cover": "iamges/title002.png",
 
     "orientation": "both",
     "zoomable": false,

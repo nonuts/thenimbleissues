@@ -21,13 +21,18 @@ html
   body#dressed class="#{yield_content(:body_class)}"
     nav.navbar
       .content-element
-        == link_to ' 002: Something is missing', '001-content.html'
+        a href="001-content.html"
+          |  002: Something is missing
         .medium-column.float-left
-          == link_to '<', yield_content(:link_back)
-          == link_to '>', yield_content(:link_forward)
+          a href=yield_content(:link_back)
+            i class="icon-arrow-left"
+          a href=yield_content(:link_forward)
+            i class="icon-arrow-right"
         .medium-column.float-right
-          <a href="#" class="fontSizeMinus">-</a>
-          <a href="#" class="fontSizePlus">+</a>
+          a href="#" class="fontSizeMinus"
+            i class="icon-minus-sign"
+          a href="#" class="fontSizePlus"
+            i class="icon-plus-sign"
     #content-scrollable.overthrow
       == yield
 

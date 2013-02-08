@@ -1,0 +1,24 @@
+- content_for(:link_back, "painting.html")
+- content_for(:link_forward, "#")
+
+.content-element
+  .full-column
+    h2
+      | Next issue: 003-In pairs
+    p
+      | Featuring newcomers WanderGranvik, an independant subsidillary of Coalfather Industries.
+    p
+      | And collaborations of all kinds.
+    p
+      | Coming out in Mar 2013
+
+img src="images/next.jpg" class="full"
+p.caption
+	| 'Widz' -- by The Coalfather
+p.caption#disclaimer
+  | For any kind of feedback, please head over to The Nimble flickr pool: 
+  br
+  == link_to 'http://www.flickr.com/groups/the-nimble-magazine', 'http://www.flickr.com/groups/the-nimble-magazine?referrer=Baker'
+script src="javascripts/imgscroll.js" type="text/javascript"
+
+

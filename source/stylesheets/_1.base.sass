@@ -48,6 +48,9 @@ body
   @media only screen and (max-device-width: 1024px) and (orientation:landscape)
     background: #fff url(../images/main-bg-landscape.png) fixed top left
 
+a:visited, a:link, a:hover
+  color: $c-spot
+
 h1,
 h2,
 h3,
@@ -264,13 +267,13 @@ body.fixed-poster
 nav
   background: $c-spot
   +opacity(1)
+  +box-shadow(#000 0px 0px 5px)
   color: $c-base
-  border-bottom: 2px solid darken($c-spot, 10%)
   width: 100%
   height: 30px
-  margin-top: 0px
-  margin-bottom: 0px
+  margin: 0 auto
   z-index: 99999
+  position: relative
   height: $nav-height
   @media only screen and (max-device-width: 480px) and (orientation:landscape)
     display: none
@@ -285,11 +288,15 @@ nav
     @media only screen and (max-device-width: 1024px) and (orientation:landscape)
       left: 420px
   a
-    padding: 0 $base-gap*4 0 0
+    padding: 0 $base-gap*2 0 $base-gap*2
     text-decoration: none!important
-    color: #fff!important
     border-bottom: none!important
-    font-size: 1.5em
+    i
+      +text-shadow(1px 1px 3px #000)
+      color: lighten($c-spot, 70%)
+      &:active
+        color: #fff
+        
   .float-left
     position: relative
     top: 4px
@@ -297,6 +304,9 @@ nav
     text-align: right
     position: relative
     top: 5px
+    a
+      padding: 0 $base-gap*2 0 $base-gap*2
+      
 
 
 .caption
@@ -311,7 +321,32 @@ nav
     background: #fff
     margin-bottom: 0
 
+.popover
+  +box-shadow(rgba(0,0,0,0.5) 0px 0px 2px)
+  .arrow
+    border-bottom-color: $c-spot
+  .wrap
+    background-color: $c-spot
+    color: #fff
+    border-color: $c-spot
+    border-width: 1px
+    font-family: Open Sans
+    font-size: 0.9em
+    line-height: 1.5em
+
 .content-element
+  .info-popover
+    text-decoration: none
+    color: #fff
+    background: $c-spot
+    border: none
+    +inline-block
+    padding: 0 5px
+    +border-radius(3px)
+    +box-shadow(rgba(0,0,0,0.5) 0px 0px 2px)
+    margin-top: -2px
+    font-family: Open Sans
+    font-weight: normal
   &.intro
     position: relative
     top: 5px
@@ -436,25 +471,6 @@ nav
       background: rgba(255,255,255,1)
       margin-top: $base-gap
 
-$popover-base-color: #ddd
-
-.info-popover
-  text-decoration: none
-  background: $popover-base-color
-  border: none!important
-  +inline-block
-  padding: 0 5px
-  +border-radius(3px)
-  +box-shadow(rgba(0,0,0,0.5) 0px 0px 2px)
-  margin-top: -2px
-.popover
-  +box-shadow(rgba(0,0,0,0.8) 0px 0px 4px)
-  .arrow
-    border-bottom-color: darken($popover-base-color, 50%)
-  .wrap
-    background: $popover-base-color
-    border-color: darken($popover-base-color, 50%)
-    border-width: 1px
 
 img.title
   width: 100%
@@ -467,6 +483,7 @@ img.title
   margin-bottom: $base-gap
   border-bottom: 1px dotted darken($c-spot,50%)
   #imgscroll-legend
+    display: none
     p
       background: #ccc
       +border-radius(6px 6px 0px 0px)
@@ -474,3 +491,9 @@ img.title
         color: #000
         font-weight: bold
 
+// ISSUE SPECIFIC
+#emptiness-visual
+  margin-bottom: 400px
+  @media only screen and (max-device-width: 1024px) and (orientation:landscape)
+    margin-bottom: 0
+  
