@@ -7,3 +7,5 @@ gem "slim"
 gem "less"
 
 gem "therubyracer", :require => 'v8'
+
+gem 'neat'

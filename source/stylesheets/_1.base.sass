@@ -1,8 +1,5 @@
 
 
-@import "compass/css3"
-@import "compass/typography"
-
 
 
 $c-base: #fff
@@ -68,11 +65,14 @@ img
       width: 1024px
       margin-top: 0px
     @media only screen and (max-device-width: 480px) and (orientation:landscape)
-      width: 480px
-      margin-top: 0px
+      display: none
     @media only screen and (max-device-width: 320px) and (orientation:portrait)
       width: 320px
       margin-top: 0px
+    + .caption
+      @media only screen and (max-device-width: 480px) and (orientation:landscape)
+        display: none
+      
 video
   margin-bottom: $base-gap
   @media only screen and (max-device-width: 480px) and (orientation:landscape)
@@ -116,7 +116,7 @@ body#bare
     border-left: 1px solid rgba(255,255,255,0)
     border-top: 1px solid rgba(255,255,255,0)
     border-bottom: 1px solid rgba(155,155,155,0.1)
-    +border-radius(5px 0px 0px 5px)
+    border-radius: 5px 0px 0px 5px
     height: 990px
     @media only screen and (max-device-width: 1024px) and (orientation:landscape)
       height: 734px
@@ -165,7 +165,7 @@ body#bare
     -webkit-filter: grayscale(0.2) brightness(0) blur(0px) saturate(0.2)
     +transform(translate3d(0,0,0))
   100%
-    +opacity(0.4)
+    opacity: 0.4
 
 
 
@@ -177,7 +177,7 @@ body#bare
   width: 100%
   +box-shadow(1px 0px 3px #999)
   border-bottom: 1px solid #000
-  +opacity(0.9)
+  opacity: 0.9
   -webkit-animation-name: logoTitle
   -webkit-animation-duration: 3s
   -webkit-animation-iteration-count: 1
@@ -190,25 +190,18 @@ body#bare
   @media only screen and (max-device-width: 320px) and (orientation:portrait)
     width: 320px
     margin-top: 0px
-    height: 200px
+    height: 116px
+    +background-size(100%)
   #logo
-    -webkit-animation-name: logoTitleLogo
-    -webkit-animation-duration: 15s
-    -webkit-animation-iteration-count: 1
-    -webkit-animation-direction: alternate
-    -webkit-animation-timing-function: ease-out
-    -webkit-animation-fill-mode: forwards
-    -webkit-animation-delay: 0s
+    +animation(logoTitleLogo 15s ease-out 1 alternate forwards 0s)
     position: absolute
     top: 125px
     left: 265px
     z-index: 1001
     text-align: center
     margin-bottom: -80px
-    @media only screen and (max-device-width: 480px) and (orientation:landscape)
-      width: 400px
     @media only screen and (max-device-width: 320px) and (orientation:portrait)
-      width: 260px
+      display: none
 
 #content-title
   padding-bottom: 50px
@@ -255,7 +248,7 @@ body#title
 
 nav
   background: $c-spot
-  +opacity(0.9)
+  opacity: 0.9
   color: $c-base
   border-bottom: 2px solid darken($c-spot, 10%)
   width: 100%
@@ -365,7 +358,7 @@ nav
     background: transparent url(../images/001-title-overlay.png) top left no-repeat
     background-size: cover
     z-index: 999
-    +opacity(0.95)
+    opacity: 0.95
     @media only screen and (max-device-width: 1024px) and (orientation:landscape)
       display: none
   h1
@@ -398,13 +391,13 @@ nav
       color: #fff!important
       line-height: 1em
       padding: 4px
-      +border-radius(5px)
+      border-radius: 5px
       text-decoration: none
   p
     color: #666
 
   ul
-    +inline-block-list
+    +inline-block
     padding: $base-gap * 3 100px
     color: #000
     li
@@ -425,7 +418,7 @@ img.title
   #imgscroll-legend
     p
       background: #ccc
-      +border-radius(6px 6px 0px 0px)
+      border-radius: 6px 6px 0px 0px
       a
         color: #000
         font-weight: bold
