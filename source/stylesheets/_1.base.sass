@@ -1,7 +1,7 @@
 
 
-@import "compass/css3"
-@import "compass/typography"
+@import "bourbon"
+@import "neat/neat"
 
 
 
@@ -74,12 +74,13 @@ img
       width: 1024px
       margin-top: 0px
     @media only screen and (max-device-width: 480px) and (orientation:landscape)
-      width: 480px
-      margin-top: 0px
+      display: none
     @media only screen and (max-device-width: 320px) and (orientation:portrait)
       width: 320px
       margin-top: 0px
-video
+    + .caption
+      @media only screen and (max-device-width: 480px) and (orientation:landscape)
+        display: nonevideo
   margin-bottom: $base-gap
   @media only screen and (max-device-width: 480px) and (orientation:landscape)
     height: auto
@@ -118,11 +119,11 @@ body#bare
     background: rgba(0,0,0,0)
     padding: $base-gap*8 0 0
     margin-left: 0
-    +box-shadow(rgba(0,0,0,0) -2px 2px 5px)
+    +box-shadow(-2px 2px 5px rgba(0,0,0,0))
     border-left: 1px solid rgba(255,255,255,0)
     border-top: 1px solid rgba(255,255,255,0)
     border-bottom: 1px solid rgba(155,155,155,0.1)
-    +border-radius(5px 0px 0px 5px)
+    border-radius: 5px 0px 0px 5px
     height: 990px
     @media only screen and (max-device-width: 1024px) and (orientation:landscape)
       height: 734px
@@ -171,7 +172,7 @@ body#bare
     -webkit-filter: grayscale(0.2) brightness(0) blur(0px) saturate(0.2)
     +transform(translate3d(0,0,0))
   100%
-    +opacity(0.4)
+    opacity: 0.4
 
 
 
@@ -183,7 +184,7 @@ body#bare
   width: 100%
   +box-shadow(1px 0px 3px #999)
   border-bottom: 1px solid #000
-  +opacity(0.9)
+  opacity: 0.9
   -webkit-animation-name: logoTitle
   -webkit-animation-duration: 3s
   -webkit-animation-iteration-count: 1
@@ -196,7 +197,8 @@ body#bare
   @media only screen and (max-device-width: 320px) and (orientation:portrait)
     width: 320px
     margin-top: 0px
-    height: 200px
+    height: 116px
+    +background-size(100%)
   #logo
     -webkit-animation-name: logoTitleLogo
     -webkit-animation-duration: 15s
@@ -212,9 +214,7 @@ body#bare
     text-align: center
     margin-bottom: -80px
     @media only screen and (max-device-width: 480px) and (orientation:landscape)
-      width: 400px
-    @media only screen and (max-device-width: 320px) and (orientation:portrait)
-      width: 260px
+      display: none
 
 #content-title
   padding-bottom: 50px
@@ -262,11 +262,15 @@ body.fixed-poster
   background-size: 712px auto
   @media only screen and (max-device-width: 1024px) and (orientation:landscape)
     background-size: 892px auto
+  @media only screen and (max-device-width: 480px) and (orientation:landscape)
+    background-size: 436px auto
+  @media only screen and (max-device-width: 320px) and (orientation:portrait)
+    background-size: 290px auto
 
 
 nav
   background: $c-spot
-  +opacity(1)
+  opacity: 1
   +box-shadow(#000 0px 0px 5px)
   color: $c-base
   width: 100%
@@ -292,7 +296,7 @@ nav
     text-decoration: none!important
     border-bottom: none!important
     i
-      +text-shadow(1px 1px 3px #000)
+      text-shadow: 1px 1px 3px #000
       color: lighten($c-spot, 70%)
       &:active
         color: #fff
@@ -342,7 +346,7 @@ nav
     border: none
     +inline-block
     padding: 0 5px
-    +border-radius(3px)
+    border-radius: 3px
     +box-shadow(rgba(0,0,0,0.5) 0px 0px 2px)
     margin-top: -2px
     font-family: Open Sans
@@ -425,7 +429,7 @@ nav
     background: transparent url(../images/001-title-overlay.png) top left no-repeat
     background-size: cover
     z-index: 999
-    +opacity(0.95)
+    opacity: 0.95
     @media only screen and (max-device-width: 1024px) and (orientation:landscape)
       display: none
   h1
@@ -458,13 +462,13 @@ nav
       color: #fff!important
       line-height: 1em
       padding: 4px
-      +border-radius(5px)
+      border-radius: 5px
       text-decoration: none
   p
     color: #666
 
   ul
-    +inline-block-list
+    +inline-block
     padding: $base-gap * 3 100px
     color: #000
     li
@@ -486,7 +490,7 @@ img.title
     display: none
     p
       background: #ccc
-      +border-radius(6px 6px 0px 0px)
+      border-radius: 6px 6px 0px 0px
       a
         color: #000
         font-weight: bold
@@ -494,6 +498,15 @@ img.title
 // ISSUE SPECIFIC
 #emptiness-visual
   margin-bottom: 400px
+  @media only screen and (max-device-width: 320px) and (orientation:portrait)
+    margin-bottom: 150px
   @media only screen and (max-device-width: 1024px) and (orientation:landscape)
     margin-bottom: 0
-  
+
+#html5-video
+  width: 100%
+  height: 574px 
+  @media only screen and (max-device-width: 320px) and (orientation:portrait)
+    height: 240px
+  @media only screen and (max-device-width: 480px) and (orientation:landscape)
+    height: 240px
