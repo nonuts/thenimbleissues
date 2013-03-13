@@ -45,6 +45,7 @@ body
   -webkit-user-select: none
   user-select: none
   background: #fff url(../images/main-bg.png) fixed top left
+  +background-size(100%)
   @media only screen and (max-device-width: 1024px) and (orientation:landscape)
     background: #fff url(../images/main-bg-landscape.png) fixed top left
 
@@ -213,7 +214,7 @@ body#bare
     z-index: 1001
     text-align: center
     margin-bottom: -80px
-    @media only screen and (max-device-width: 480px) and (orientation:landscape)
+    @media only screen and (max-device-width: 320px) and (orientation:portrait)
       display: none
 
 #content-title

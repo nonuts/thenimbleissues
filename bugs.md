@@ -1,7 +1,6 @@
 ###generell
 
-* Was in store?
-* flickr Gruppe zu restriktiv
+* content zu kurz
 
 ###landscape
 
