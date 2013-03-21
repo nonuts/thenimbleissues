@@ -1,9 +1,5 @@
-
-
 @import "bourbon"
 @import "neat/neat"
-
-
 
 $c-base: #fff
 $c-spot: #341e06
@@ -120,7 +116,7 @@ body#bare
     background: rgba(0,0,0,0)
     padding: $base-gap*8 0 0
     margin-left: 0
-    +box-shadow(-2px 2px 5px rgba(0,0,0,0))
+    box-shadow: -2px 2px 5px rgba(0,0,0,0)
     border-left: 1px solid rgba(255,255,255,0)
     border-top: 1px solid rgba(255,255,255,0)
     border-bottom: 1px solid rgba(155,155,155,0.1)
@@ -159,11 +155,11 @@ body#bare
   
 @-webkit-keyframes logoTitle
   0%
-    -webkit-filter: grayscale(1) brightness(0.7) saturate(2)
+    -webkit-filter: opacity(0)
   50%
-    -webkit-filter: grayscale(0.2) brightness(0) saturate(9)
+    -webkit-filter: opacity(0.2)
   100%
-    -webkit-filter: grayscale(0.2) brightness(0) saturate(9)
+    -webkit-filter: opacity(1)
 
 @-webkit-keyframes logoTitleLogo
   0%
@@ -173,7 +169,7 @@ body#bare
     -webkit-filter: grayscale(0.2) brightness(0) blur(0px) saturate(0.2)
     +transform(translate3d(0,0,0))
   100%
-    opacity: 0.4
+    opacity: 0.9
 
 
 
@@ -183,16 +179,8 @@ body#bare
   margin: 0
   height: 343px
   width: 100%
-  +box-shadow(1px 0px 3px #999)
+  box-shadow: 1px 0px 3px #999
   border-bottom: 1px solid #000
-  opacity: 0.9
-  -webkit-animation-name: logoTitle
-  -webkit-animation-duration: 3s
-  -webkit-animation-iteration-count: 1
-  -webkit-animation-direction: alternate
-  -webkit-animation-timing-function: ease-out
-  -webkit-animation-fill-mode: forwards
-  -webkit-animation-delay: 0s
   @media only screen and (max-device-width: 480px) and (orientation:landscape)
     display: none
   @media only screen and (max-device-width: 320px) and (orientation:portrait)
@@ -201,21 +189,32 @@ body#bare
     height: 116px
     +background-size(100%)
   #logo
-    -webkit-animation-name: logoTitleLogo
-    -webkit-animation-duration: 15s
-    -webkit-animation-iteration-count: 1
-    -webkit-animation-direction: alternate
-    -webkit-animation-timing-function: ease-out
-    -webkit-animation-fill-mode: forwards
-    -webkit-animation-delay: 0s
     position: absolute
-    top: 125px
-    left: 265px
+    top: 150px
+    left: 175px
     z-index: 1001
     text-align: center
     margin-bottom: -80px
+    #nimble
+      font-size: 8em
+      line-height: 0.3em
+      color: #54531b
+      z-index: 10000
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93,-2px 1px #cdd2d5, -2px 3px #808d93,-3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5
     @media only screen and (max-device-width: 320px) and (orientation:portrait)
-      display: none
+      left: 90px
+      top: 40px
+      #nimble
+        font-size: 4em
+      #the
+        font-size: 1.5em
+    #the
+      color: red
+      font-size: 3em
+      position: absolute
+      top: -30px
+      left: 120px
+      z-index: 999
 
 #content-title
   padding-bottom: 50px
@@ -225,6 +224,8 @@ body#bare
     height: 990px - 343 - $nav-height - 45
     @media only screen and (max-device-width: 1024px) and (orientation:landscape)
       height: 734px - 343 - $nav-height - 45
+    @media only screen and (max-device-width: 320px) and (orientation:portrait)
+      height: 360px
   li
     width: 50%
     margin: 0 auto
@@ -272,7 +273,7 @@ body.fixed-poster
 nav
   background: $c-spot
   opacity: 1
-  +box-shadow(#000 0px 0px 5px)
+  box-shadow: #000 0px 0px 5px
   color: $c-base
   width: 100%
   height: 30px
@@ -327,7 +328,7 @@ nav
     margin-bottom: 0
 
 .popover
-  +box-shadow(rgba(0,0,0,0.5) 0px 0px 2px)
+  box-shadow: rgba(0,0,0,0.5) 0px 0px 2px
   .arrow
     border-bottom-color: $c-spot
   .wrap
@@ -348,7 +349,7 @@ nav
     +inline-block
     padding: 0 5px
     border-radius: 3px
-    +box-shadow(rgba(0,0,0,0.5) 0px 0px 2px)
+    box-shadow: rgba(0,0,0,0.5) 0px 0px 2px
     margin-top: -2px
     font-family: Open Sans
     font-weight: normal
@@ -364,16 +365,16 @@ nav
     border-color: $c-spot!important
     color: $c-spot
   .story &
-    +box-shadow(#666 0px 0px 5px inset)
+    box-shadow: #666 0px 0px 5px inset
     .full-column
       &.full-peek
         margin-bottom: 20px
       &.first
         margin-top: 30px
-        +box-shadow(#666 2px 0px 5px)
+        box-shadow: #666 2px 0px 5px
       &.last
         margin-bottom: 500px
-        +box-shadow(#666 2px 0px 5px)
+        box-shadow: #666 2px 0px 5px
     .full-column, .medium-column
       background: #fff
       > *
@@ -392,7 +393,7 @@ nav
   @media only screen and (max-device-width: 1024px) and (orientation:landscape)
     min-height: 744px
   img
-    +box-shadow(#000 0px 0px 3px)
+    box-shadow: #000 0px 0px 3px
     max-height: 70%
     max-width: 90%
   p
@@ -496,14 +497,6 @@ img.title
         color: #000
         font-weight: bold
 
-// ISSUE SPECIFIC
-#emptiness-visual
-  margin-bottom: 400px
-  @media only screen and (max-device-width: 320px) and (orientation:portrait)
-    margin-bottom: 150px
-  @media only screen and (max-device-width: 1024px) and (orientation:landscape)
-    margin-bottom: 0
-
 #html5-video
   width: 100%
   height: 574px 
@@ -511,3 +504,8 @@ img.title
     height: 240px
   @media only screen and (max-device-width: 480px) and (orientation:landscape)
     height: 240px
+    
+// ISSUE SPECIFIC
+#wandergranvik
+  @media only screen and (max-device-width: 480px)
+    display: none

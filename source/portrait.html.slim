@@ -1,13 +1,55 @@
 - content_for(:link_back, "editorial.html")
 - content_for(:link_forward, "story.html")
 
-.content-element.intro.resizable
-  .full-column
-    p
-      cite
-        | "I was pretty terrified about the length of the commitment and quickly running out of ideas, but it actually made me more creative and productive."
+
 
 .content-element
+iframe id="wandergranvik" src="wandergranvik/WanderGranvik.html" style="width: 100%; height: 640px"
+
+
+.content-element.intro.resizable
+  .full-column
+    h2
+      | The Art Of: CoalFather
+    p
+      | Coalfather Industries represents a shared vision between artists Kara Jansson and Craig Newsom. The character of The Coalfather–developed during an online chat–infuses and informs their collaboration. The Coalfather is a once sleeping demon aroused into a New Morning by the subconscious chorus of a civilization hellbent on consumption, convenience and corn syrup. It is this ribald and roguish spirit of The Coalfather that becomes a lens through which our world is viewed.
+
+.content-element.resizable
+  .full-column
+    p
+      | CoalFather goes on answering 
+      a href="#" id="the-five-nimble-qs" class="info-popover"
+        | The 5 Nimble Q's
+        i class="icon-fire" style="color: #fff; padding-left: 5px"
+      | :
+    p
+      b
+        | Why? 
+      | "Yes."
+  .full-column
+    p
+      b
+        | Where? 
+      | "Yes."
+  .full-column
+    p
+      b
+        | How? 
+      | "Yes."
+  .full-column
+    p
+      b
+        | When? 
+      | "Yes."
+  .full-column
+    p
+      b
+        | Tips? 
+      | "Yes."
+    h2
+      | Gallery
+    p
+      | Enjoy some of the recent work of The CoalFather here. All 3d-characters were done on iPad using either 123D Sculpt or Creature.
 #imgscroll-content
   #imgscroll-legend
     p
@@ -16,99 +58,25 @@
     #imgscroll-img.imgscroll-img
       img src="images/portrait/piece-001.jpg"
       .caption
-        p The showdown | 1/5
+        p Closing Time | 1/4
     #imgscroll-img.imgscroll-img
       img src="images/portrait/piece-002.jpg"
       .caption
-        p After midnight | 2/5
+        p Peoria 1974 | 2/4
     #imgscroll-img.imgscroll-img
       img src="images/portrait/piece-003.jpg"
       .caption
-        p Watching, Waiting | 3/5
+        p Sport | 3/4
     #imgscroll-img.imgscroll-img
       img src="images/portrait/piece-004.jpg"
       .caption
-        p Cornered | 4/5
-    #imgscroll-img.imgscroll-img
-      img src="images/portrait/piece-005.jpg"
-      .caption
-        p Trouble On Main St | 5/5
-
-
-.content-element.intro.resizable
-  .full-column
-    h2
-      | The Art Of: Mike Miller aka mikedia
-
-  .medium-column.float-left
-    p
-      | Sometimes you have to force yourself into a rhythm to get things done, and to improve your work. 
-  .medium-column.float-right
-    p
-      |  Mike Miller has done exactly that: he painted a piece of artwork each day, for 12 months.
-.content-element.resizable
-  .medium-column.float-left
-    strong
-      | A daily routine
-    cite
-      p
-        | "It was a personal challenge to stop being complacent and get more artwork done. I'd been dormant most of 2011, and before that was lucky to get one piece done a week. A daily routine seemed to be the best way to prevent procrastination, and I made sure to publicly acknowledge it so I wouldn't get lazy or give up."
-  .medium-column.float-right
-    img src="images/portrait/fox.jpg"
-  .full-column
-    p
-      | If you want to see all the artwork Mike has done, check out his flickr-set 
-      a href="http://www.flickr.com/photos/m1ll3r/sets/72157629847452064/?referrer=Baker"
-        | 365 days of art
-      | .
-.content-element.resizable
-  .full-column
-    p
-      | Mike goes on answering 
-      a href="#" id="the-five-nimble-qs" class="info-popover"
-        | The 5 Nimble Q's
-        i class="icon-fire" style="color: #fff; padding-left: 5px"
-      | :
-    p
-      b
-        | Why? 
-      | "It's fun, it makes me a happier person. Getting lost on a canvas helps me reflect and let go of the little things that I shouldn't get so hung up on."
-  .full-column
-    p
-      b
-        | Where? 
-      | "Mostly at home, my fortress of solitude :)"
-  .full-column
-    p
-      b
-        | How? 
-      | "Using an iPad3 (or whatever they called it) and Procreate. I also picked up a Pogo Connect after reading the Nimble Mag article on it, and 95% love it. Life is a lot easier when you don't have to fake pressure sensitivity. The 5% is for when it confuses my palm with the stylus, which doesn't happen often, but it really hampers workflow when it does."
-  .full-column
-    p
-      b
-        | When? 
-      | "Whenever I can, except for early mornings. My brain refuses to be creative before 8am."
-  .full-column
-    p
-      b
-        | Tips? 
-      | "For pen/illustration brushes, I like to increase the max-size to get more variation in strokes, and then zoom in on the canvas for better control. Controlled variation I guess? It gives me a happy middle ground where I have detail, but not too fine of detail where things get washed out."
-
-.content-element
-  h3
-    | Midday-Moon
-  p
-    | Being a highly skilled web-developer as well, Mike even did a web-comic during his art-marathon, using all kinds of nifty web-technology and of course, it was painted on the iPad. 
-  p
-    | I am very happy he let me include it in this issue of The Nimble Mag. 
-  iframe src="midday-moon/index.html" style="width: 100%; height: 640px"
-
+        p Weggs | 4/4
 
 p.caption#disclaimer
-  | Mikes work: 
-  == link_to "Web", 'http://www.mikedia.com?referrer=Baker'
+  | The CoalFathers work: 
+  == link_to "Web", 'http://www.coalfather.com?referrer=Baker'
   | , 
-  == link_to "flickr", 'http://www.flickr.com/photos/m1ll3r?referrer=Baker'
+  == link_to "flickr", 'http://www.flickr.com/photos/coalfather?referrer=Baker'
 
 script src="javascripts/imgscroll.js" type="text/javascript"
 
