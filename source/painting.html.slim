@@ -1,7 +1,8 @@
 - content_for(:link_back, "story.html")
 - content_for(:link_forward, "gear.html")
 
-
+- content_for(:head) do
+  == stylesheet_link_tag 'less/main-16px.css', 'laker/styles.css'
 
 .content-element.resizable
   .full-column

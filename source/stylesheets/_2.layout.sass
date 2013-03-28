@@ -1,0 +1,60 @@
+$visual-grid: true
+
+$ipad: new-breakpoint(device-aspect-ratio 3/4)
+$iphone: new-breakpoint(max-device-width 320px)
+$iphone5: new-breakpoint(device-aspect-ratio 40/71)
+
+
+
+
+
+@font-face
+  font-family: Open Sans
+  src: url(../fonts/Open_Sans/OpenSans-Regular.ttf)
+
+@font-face
+  font-family: Stoke
+  src: url(../fonts/Stoke/Stoke-Regular.ttf)
+
+@font-face
+  font-family: Bree Serif
+  src: url(../fonts/Bree_Serif/BreeSerif-Regular.ttf)
+
+
+
+h1,
+h2,
+h3,
+h4
+  font-family: 'Bree Serif', serif
+  color: $c-spot!important
+p, section
+  font-family: 'Open Sans', sans-serif
+  strong
+    color: $c-spot
+
+
+
+section
+  +outer-container
+  +row
+  +pad(10px 0 10px 0)
+  h1
+    +shift(3)
+    +media($iphone)
+      +shift(1)
+      font-size: 3em
+  aside.app-icon
+    +span-columns(2)
+    +shift(1)
+    +media($iphone)
+      +span-columns(11)
+      +shift(1)
+  aside.footnote
+    +span-columns($grid-columns)
+    +shift(1)
+  article
+    +span-columns(8)
+    +media($iphone)
+      +span-columns(10)
+      +shift(1)

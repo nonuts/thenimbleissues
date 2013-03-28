@@ -2,6 +2,8 @@
 - content_for(:link_forward, "story.html")
 
 
+- content_for(:head) do
+  == stylesheet_link_tag 'less/main-16px.css', 'laker/styles.css'
 
 .content-element
 iframe id="wandergranvik" src="wandergranvik/WanderGranvik.html" style="width: 100%; height: 640px"

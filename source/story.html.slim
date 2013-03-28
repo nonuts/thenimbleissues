@@ -3,6 +3,9 @@
 - content_for(:body_class, "fixed-poster")
 
 
+- content_for(:head) do
+  == stylesheet_link_tag 'less/main-16px.css', 'laker/styles.css'
+
 .story
   .content-element
     .full-column.resizable
