@@ -97,12 +97,17 @@ img
 
 .overthrow-enabled #content-scrollable
   height: 990px
-  @media only screen and (max-device-width: 1024px) and (orientation:landscape)
+  @media only screen and (device-aspect-ratio: 3/4) and (orientation:landscape)
     height: 734px
-  @media only screen and (max-device-width: 480px) and (orientation:landscape)
+  @media only screen and (device-aspect-ratio: 2/3) and (orientation:landscape)
     height: 320px
-  @media only screen and (max-device-width: 320px) and (orientation:portrait)
+  @media only screen and (device-aspect-ratio: 2/3) and (orientation:portrait)
     height: 480px
+  @media screen and (device-aspect-ratio: 40/71) and (orientation:portrait)
+    height: 568px
+  @media screen and (device-aspect-ratio: 40/71) and (orientation:landscape)
+    height: 320px
+
 
 // the index overlay
 
@@ -217,14 +222,24 @@ body#bare
     @media only screen and (max-device-width: 320px) and (orientation:portrait)
       display: none
 
+
 #content-title
   padding-bottom: 50px
   padding-top: 30px
   text-align: center
   .overthrow-enabled &
-    height: 990px - 343 - $nav-height - 45
-    @media only screen and (max-device-width: 1024px) and (orientation:landscape)
-      height: 734px - 343 - $nav-height - 45
+    @media only screen and (device-aspect-ratio: 3/4) and (orientation:landscape)
+      height: 391px
+    @media only screen and (device-aspect-ratio: 3/4) and (orientation:portrait)
+      height: 646px
+    @media only screen and (device-aspect-ratio: 2/3) and (orientation:landscape)
+      height: 320px
+    @media only screen and (device-aspect-ratio: 2/3) and (orientation:portrait)
+      height: 364px
+    @media screen and (device-aspect-ratio: 40/71) and (orientation:landscape)
+      height: 408px
+    @media screen and (device-aspect-ratio: 40/71) and (orientation:portrait)
+      height: 452px
   li
     width: 50%
     margin: 0 auto
