@@ -246,10 +246,8 @@ px      68    160    252    344    436
 	
 }
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (orientation : landscape){
+
+@media screen and (device-aspect-ratio: 40/71) and (orientation:landscape){
 	body {
 	    width: 568px;
 	    padding: 0px
@@ -260,10 +258,7 @@ and (orientation : landscape){
   
 }
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (orientation : portrait){
+@media screen and (device-aspect-ratio: 40/71) and (orientation:portrait){
 	body {
 	    width: 320px;
 	    margin: auto; padding: 0px
