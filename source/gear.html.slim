@@ -2,39 +2,49 @@
 - content_for(:link_forward, "next.html")
 
 
-section.resizable
+- content_for(:head) do
+  == stylesheet_link_tag 'less/main-16px.css', 'laker/styles.css'
+
+section.resizable.full
   h1
 	 | New gear
 
-
-section.resizable
-  aside.app-icon
-    img src="http://placehold.it/112x112"
+section.resizable.full.intro
   article
-    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    
+    p This is a new section in The Nimble Magazine wrapping up what's new and mentionable in the app-market. This time with flipink and Drawing Carl.
 
-section.resizable
+
+section.resizable.small-aside
   aside.app-icon
-    img src="http://placehold.it/112x112"
+    img src="images/gear/flipink.png"
   article
-    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-section.resizable
-  aside.app-icon
-    img src="http://placehold.it/112x112"
-  article
-    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-section.resizable
-  aside.app-icon
-    img src="http://placehold.it/112x112"
-  article
-    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-
-section
+    h2
+      | flipink
+    p
+      | There's probably a lot to say about this app when it comes to comparing it with paper by 53, and lots of it has been already covered in the App-Store comments. Nevertheless, if you like paper, you will instantly feel at ease with flipink as well. It is pretty much the same deal, adding mainly a simple zoom and a color swatch history to your tool shed. I Like using paper for it's simplicity and it's the same with flipink: a simple intuitive painting app, great for sketches and fast, no-layer approach. One unique thing aded is the calendar view which makes this a real nice app for daily sketches, too.
+    p
+      img src="images/gear/flipink-shot.jpg"
   aside.footnote
-	| The pogo connect is available 
-	== link_to 'here', 'http://tenonedesign.com/connect.php?referrer=Baker'
-	|	for 79$.
+    | Find flipink on the 
+    == link_to 'App-Store', 'https://itunes.apple.com/de/app/flipink/id609426490?referrer=Safari'
+    |	for free.
+
+section.resizable.small-aside
+  aside.app-icon
+    img src="images/gear/drawing-with-carl.png"
+  article
+    h2
+      | Drawing Carl
+    p
+      | I used 
+      == link_to 'Drawing Carl', 'http://tayasui.com/drawingcarl/theApp.php?referrer=Baker'
+      |  in one of my kids-workshops lately: at the moment it seems to me that this is one of the best apps to start fingerpainting. It has the usual sets of tools you would expect, plus a very nice pattern tool that (and in combination with the mirror-mode) let's you easily create simple and quick paintings. It's an universal app, so it works on all iOS devices.
+    p
+      img src="images/gear/dc-shot.jpg"
+  aside.footnote
+    | Find Darwing Carl on the 
+    == link_to 'App-Store', 'https://itunes.apple.com/us/app/drawing-carl-for-iphone-ipad/id480645514?referrer=Safari'
+    |	for $0.99/€0.79.
+
+

@@ -4,25 +4,50 @@
 - content_for(:head) do
   == stylesheet_link_tag 'less/main-16px.css', 'laker/styles.css'
 
-.content-element.resizable
-  .full-column
-    h2
-      | The Nimble University and The Nimble Outlet
+img src="images/state.jpg" class="full"
 
-  .medium-column.float-left
-    p
-      | I often start my pieces with a sketch and find myself limited later on when I want to apply color. 
-      br
-        | The Block_In_Techniques borrows 
-  .medium-column.float-right
-    p
-      | some ideas from sculpting and let's you refine your piece in a more balanced and itereative way.
-      br
-      | Apps used: 
-      == link_to 'procreate','http://procreate.si?referrer=Baker'
-      | .
-p.caption#disclaimer
-  | Have you got something to share based on this technique? Feel free to add it to The Nimble flickr pool (moderated): 
-  br
-  == link_to 'http://www.flickr.com/groups/the-nimble-magazine', 'http://www.flickr.com/groups/the-nimble-magazine?referrer=Baker'
-script src="javascripts/imgscroll.js" type="text/javascript"
+
+section.resizable
+  h1
+    | The state of The Nimble
+
+section.resizable.full.intro
+  article
+    
+    p In the first Issue of this mag, I declared this to be an experiment for me. As always, things take longer than anticipated, and I thought I'd share with you now&here, for what is planned for the future.
+
+
+section.resizable.full
+  article
+    h3
+      | Check: A new website
+    p 
+      | That's been done: under 
+      == link_to 'The-Nimble.me','http://the-nimble.me?referrer=Baker'
+      |  The Nimble Magazine has found its home. Here you can also find web touchpoints for all articles in case you want to mention it in your social media streams.
+
+section.resizable.full
+  article
+    h3
+      | Planned: The Nimble Academy
+    p 
+      | You might miss the how-to video in this issue: the reason is that I am working on more effective way to show how it's done: The Nimble Academy. The first workshop will be titled Fingerpainting 101 and it will be (most likely) delivered via email over the course of one month for a small fee.
+
+section.resizable.full
+  article
+    h3
+      | Planned: The Nimble Outlet
+    p 
+      | I know many people are asking for prints. I will start reaching out to artist to create exclusive work that will be sold through a store called The Nimble Outlet. It's not coming now, but hopefully later this year.
+
+section.resizable.full
+  article
+    h3
+      | Get in touch!
+    p 
+      | I am now also starting to look for contributors, too. So if you have a story to share, and if you want to write for The Nimble, please send me an email to  
+      == link_to 'contact@the-nimble.me', 'mailto:contact@the-nimble.me'
+
+
+
+    

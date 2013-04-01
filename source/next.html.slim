@@ -1,24 +1,27 @@
 - content_for(:link_back, "gear.html")
 - content_for(:link_forward, "#")
 
-.content-element
-  .full-column
-    h2
-      | Next issue: 003-In pairs
-    p
-      | Featuring newcomers WanderGranvik, an independant subsidillary of Coalfather Industries.
-    p
-      | And collaborations of all kinds.
-    p
-      | Coming out in Mar 2013
-
-img src="images/next.jpg" class="full"
-p.caption
-	| 'Widz' -- by The Coalfather
-p.caption#disclaimer
-  | For any kind of feedback, please head over to The Nimble flickr pool: 
-  br
-  == link_to 'http://www.flickr.com/groups/the-nimble-magazine', 'http://www.flickr.com/groups/the-nimble-magazine?referrer=Baker'
-script src="javascripts/imgscroll.js" type="text/javascript"
+- content_for(:head) do
+  == stylesheet_link_tag 'less/main-16px.css', 'laker/styles.css'
 
 
+
+section.resizable
+  h2
+    | Next issue: 004-Bunny & The Beardman
+section.resizable.full
+  p
+    | Time for bunnies. Seriously.
+  p
+    | And then it's about workshops.
+  p
+    | Coming out in May 2013
+
+section
+  aside.footnote
+    p
+      | For any kind of feedback, please send an email to 
+      
+      == link_to 'contact@the-nimble.me', 'mailto:contact@the-nimble.me'
+      | .
+    

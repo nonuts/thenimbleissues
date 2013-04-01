@@ -1,4 +1,7 @@
-$visual-grid: true
+$visual-grid: false
+$max-width: 1024px
+$grid-columns: 12
+$gutter: 2em
 
 $ipad: new-breakpoint(device-aspect-ratio 3/4)
 $iphone: new-breakpoint(max-device-width 320px)
@@ -8,53 +11,86 @@ $iphone5: new-breakpoint(device-aspect-ratio 40/71)
 
 
 
-@font-face
-  font-family: Open Sans
-  src: url(../fonts/Open_Sans/OpenSans-Regular.ttf)
-
-@font-face
-  font-family: Stoke
-  src: url(../fonts/Stoke/Stoke-Regular.ttf)
-
-@font-face
-  font-family: Bree Serif
-  src: url(../fonts/Bree_Serif/BreeSerif-Regular.ttf)
-
-
-
-h1,
-h2,
-h3,
-h4
-  font-family: 'Bree Serif', serif
-  color: $c-spot!important
-p, section
-  font-family: 'Open Sans', sans-serif
-  strong
-    color: $c-spot
-
-
 
 section
-  +outer-container
+  +shift(1)
   +row
   +pad(10px 0 10px 0)
-  h1
-    +shift(3)
-    +media($iphone)
-      +shift(1)
-      font-size: 3em
-  aside.app-icon
-    +span-columns(2)
-    +shift(1)
-    +media($iphone)
-      +span-columns(11)
-      +shift(1)
-  aside.footnote
-    +span-columns($grid-columns)
-    +shift(1)
+  
   article
-    +span-columns(8)
+  aside
+    +span-columns(11)
+  img
+    width: 100%
+    border: 1px solid #ccc
+
+  &.intro
+    font-size: 0.9em
+    font-style: italic
+    color: #ccc
+    paddingtop: 0
+
+  &.full
+    article
+      +span-columns(11)
+
+  &.half-aside
+    article
+      +span-columns(5)
+    aside
+      +span-columns(6)
+      +omega
     +media($iphone)
-      +span-columns(10)
-      +shift(1)
+      article
+        +span-columns(11)
+      aside
+        +span-columns(11)
+        +omega
+
+  &.small-aside
+    h1
+      +shift(2)
+    article
+      +span-columns(8)
+      +omega
+      +media($iphone)
+        +span-columns(10)
+        +shift(0)
+        +omega
+    aside
+      +span-columns(2)
+      img
+        width: 100%
+      &.app-icon img
+        border: none
+      +media($iphone)
+        +span-columns(11)
+        +shift(0)
+        +omega
+        &.app-icon
+          width: 25%
+      &.footnote
+        +shift(2)
+        +span-columns(10)
+        border-bottom: 1px solid #ccc
+
+  h1
+    +omega
+    +span-columns(11)
+    +media($iphone)
+      +shift(0)
+      font-size: 2.5em
+  h2
+    margin-bottom: $base-gap
+  aside.footnote
+    +span-columns(11)
+    font-size: 0.7em
+      
+
+#html5-video
+  width: 100%
+  height: 574px 
+  @media only screen and (max-device-width: 320px) and (orientation:portrait)
+    height: 240px
+  @media only screen and (max-device-width: 480px) and (orientation:landscape)
+    height: 240px
