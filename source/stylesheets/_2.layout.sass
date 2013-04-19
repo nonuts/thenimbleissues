@@ -2,12 +2,54 @@ $visual-grid: false
 $max-width: 1024px
 $grid-columns: 12
 $gutter: 2em
+$font-base-size: 18px
 
 $ipad: new-breakpoint(device-aspect-ratio 3/4)
 $iphone: new-breakpoint(max-device-width 320px)
 $iphone5: new-breakpoint(device-aspect-ratio 40/71)
 
 
+body
+  margin: 0
+  padding: 0
+  font-size: $font-base-size
+  &.parallax-mobile
+    overflow: hidden
+  h1
+    font-size: 3em
+    margin: $font-base-size/2 0
+
+
+
+// top navigation bar
+
+nav
+  background: $c-spot
+  opacity: 1
+  box-shadow: #000 0px 0px 5px
+  color: $c-base
+  width: 100%
+  height: 30px
+  margin: 0 auto
+  z-index: 99999
+  position: relative
+  height: $nav-height
+  text-align: center
+  i
+    color: #fff
+  @media only screen and (max-device-width: 480px) and (orientation:landscape)
+    display: none
+  @media only screen and (max-device-width: 320px) and (orientation:portrait)
+    display: none
+  #link-back
+    float: left
+    text-decoration: none
+  #link-forward
+    float: right
+    text-decoration: none
+    +pad(0 60px 0 0)
+  section
+    padding: 5px 0
 
 
 
@@ -15,9 +57,8 @@ $iphone5: new-breakpoint(device-aspect-ratio 40/71)
 section
   +shift(1)
   +row
-  +pad(10px 0 10px 0)
+  +pad(10px 0 20px 0)
   
-  article
   aside
     +span-columns(11)
   img
@@ -27,7 +68,7 @@ section
   &.intro
     font-size: 0.9em
     font-style: italic
-    color: #ccc
+    color: #666
     paddingtop: 0
 
   &.full
@@ -74,9 +115,48 @@ section
         +span-columns(10)
         border-bottom: 1px solid #ccc
 
+  &.parallaxed
+    +span-columns(12)
+    +shift(0)
+    +omega
+    position: relative
+    box-shadow: 0 0 3px 1px hsla(0, 0%, 0%, 0.85)
+    height: 400px // specific value, must relate to artwork
+    +media($iphone)
+      height: 200px
+    .parallax-background, .parallax-foreground, .parallax-cu
+      width: 4000px
+      height: 400px
+      position: absolute
+      background-size: contain
+      top: 0px
+      left: 0px
+      +media($iphone)
+        height: 200px
+    .parallax-background
+      background: url(../images/parallax/bg.jpg) top left
+    .parallax-foreground
+      background: url(../images/parallax/fg.png) top left
+      width: 8000px
+    .parallax-cu
+      background: url(../images/parallax/cu.png) top left repeat-x
+      opacity: 0.6
+      width: 20000px
+    #wrapper
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      width: 100%
+    #scroller
+      height: 400px
+      width: 4000px
+      +media($iphone)
+        height: 200px
+      
   h1
     +omega
-    +span-columns(11)
+    +span-columns(12)
     +media($iphone)
       +shift(0)
       font-size: 2.5em
@@ -94,3 +174,99 @@ section
     height: 240px
   @media only screen and (max-device-width: 480px) and (orientation:landscape)
     height: 240px
+
+
+// title
+
+
+@-webkit-keyframes logoTitle
+  0%
+    -webkit-filter: opacity(0)
+  50%
+    -webkit-filter: opacity(0.2)
+  100%
+    -webkit-filter: opacity(1)
+
+@-webkit-keyframes logoTitleLogo
+  0%
+    -webkit-filter: grayscale(1) brightness(0.7) blur(20px) saturate(9)
+    +transform(translate3d(0,-30px,-1000px))
+  80%
+    -webkit-filter: grayscale(0.2) brightness(0) blur(0px) saturate(0.2)
+    +transform(translate3d(0,0,0))
+  100%
+    opacity: 0.9
+
+
+
+#logo-title
+  background: #202221 url(../images/title/title.jpg) bottom left
+  padding: 0
+  margin: 0
+  height: 343px
+  width: 100%
+  box-shadow: 1px 0px 3px #999
+  border-bottom: 1px solid #000
+  @media only screen and (max-device-width: 480px) and (orientation:landscape)
+    display: none
+  @media only screen and (max-device-width: 320px) and (orientation:portrait)
+    width: 320px
+    margin-top: 0px
+    height: 116px
+    +background-size(100%)
+  #logo
+    position: absolute
+    top: 150px
+    left: 175px
+    z-index: 1001
+    text-align: center
+    margin-bottom: -80px
+    #nimble
+      font-size: 8em
+      line-height: 0.3em
+      color: #54531b
+      z-index: 10000
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93,-2px 1px #cdd2d5, -2px 3px #808d93,-3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5
+    @media only screen and (max-device-width: 320px) and (orientation:portrait)
+      left: 90px
+      top: 40px
+      #nimble
+        font-size: 4em
+      #the
+        font-size: 1.5em
+    #the
+      color: red
+      font-size: 3em
+      position: absolute
+      top: -30px
+      left: 120px
+      z-index: 999
+
+#content-title
+  padding-bottom: 50px
+  padding-top: 30px
+  text-align: center
+  .overthrow-enabled &
+    @media only screen and (device-aspect-ratio: 3/4) and (orientation:landscape)
+      height: 391px
+    @media only screen and (device-aspect-ratio: 3/4) and (orientation:portrait)
+      height: 646px
+    @media only screen and (device-aspect-ratio: 2/3) and (orientation:landscape)
+      height: 320px
+    @media only screen and (device-aspect-ratio: 2/3) and (orientation:portrait)
+      height: 364px
+    @media screen and (device-aspect-ratio: 40/71) and (orientation:landscape)
+      height: 408px
+    @media screen and (device-aspect-ratio: 40/71) and (orientation:portrait)
+      height: 452px
+
+  li
+    width: 50%
+    margin: 0 auto
+    list-style-type: none
+    border-bottom: 1px solid lighten($c-spot, 90%)
+    padding-top: $base-gap
+    &:nth-child(2)
+      border-top: 0px solid lighten($c-spot, 90%)
+    a
+      text-decoration: none

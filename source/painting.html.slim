@@ -1,53 +1,38 @@
 - content_for(:link_back, "story.html")
 - content_for(:link_forward, "gear.html")
 
-- content_for(:head) do
-  == stylesheet_link_tag 'less/main-16px.css', 'laker/styles.css'
 
-img src="images/state.jpg" class="full"
+section.parallaxed
+  #wrapper
+    #scroller
+      .parallax-background data-stellar-ratio="1"
+      .parallax-foreground data-stellar-ratio="2"
+      .parallax-cu data-stellar-ratio="5"
 
-
-section.resizable
-  h1
-    | The state of The Nimble
-
-section.resizable.full.intro
+section.full
   article
-    
-    p In the first Issue of this mag, I declared this to be an experiment for me. As always, things take longer than anticipated, and I thought I'd share with you now&here, for what is planned for the future.
+    h1
+      | Bunny & The Beardman
+    p
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        
+  script src="javascripts/iscroll.js"
+  script src="javascripts/jquery-1.7.1.min.js"
+  script src="javascripts/jquery.stellar.min.js"
+  script src="javascripts/parallax-init.js"
 
 
-section.resizable.full
-  article
-    h3
-      | Check: A new website
-    p 
-      | That's been done: under 
-      == link_to 'The-Nimble.me','http://the-nimble.me?referrer=Baker'
-      |  The Nimble Magazine has found its home. Here you can also find web touchpoints for all articles in case you want to mention it in your social media streams.
-
-section.resizable.full
-  article
-    h3
-      | Planned: The Nimble Academy
-    p 
-      | You might miss the how-to video in this issue: the reason is that I am working on more effective way to show how it's done: The Nimble Academy. The first workshop will be titled Fingerpainting 101 and it will be (most likely) delivered via email over the course of one month for a small fee.
-
-section.resizable.full
-  article
-    h3
-      | Planned: The Nimble Outlet
-    p 
-      | I know many people are asking for prints. I will start reaching out to artist to create exclusive work that will be sold through a store called The Nimble Outlet. It's not coming now, but hopefully later this year.
-
-section.resizable.full
-  article
-    h3
-      | Get in touch!
-    p 
-      | I am now also starting to look for contributors, too. So if you have a story to share, and if you want to write for The Nimble, please send me an email to  
-      == link_to 'contact@the-nimble.me', 'mailto:contact@the-nimble.me'
-
-
-
-    
+javascript:
+  jQuery(document).ready(function($) {
+    $("#the-five-nimble-qs").popover({
+      verticalOffset: 2,
+      horizontalOffset: 200,
+      content: "Five essential questions to cast a light on the motivation of 'why do I paint on a mobile device'. Makes the life of the editor easier as well."
+    });
+    $("#the-five-nimble-qs").click(function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      $("#the-five-nimble-qs").popover('show');
+      $(".popover").addClass('animated swing');
+    });
+  });

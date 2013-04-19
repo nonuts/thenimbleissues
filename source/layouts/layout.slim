@@ -14,28 +14,20 @@ html
     link href="stylesheets/style.css" rel="stylesheet"
     script src="javascripts/jquery-1.7.1.min.js" type="text/javascript"
     script src="javascripts/jquery.touchSwipe-1.2.1.js" type="text/javascript"
-    script src="javascripts/app.js" type="text/javascript"
     script src="javascripts/overthrow.js" type="text/javascript"
     script src="javascripts/jquery.popover-1.1.2.js" type="text/javascript"
 
   
   body#dressed class="#{yield_content(:body_class)}"
-    nav.navbar
-      .content-element
-        a href="001-content.html"
-          |  003: In Pairs
-        .medium-column.float-left
-          a href=yield_content(:link_back)
-            i class="icon-arrow-left"
-          a href=yield_content(:link_forward)
-            i class="icon-arrow-right"
-        .medium-column.float-right
-          a href="#" class="fontSizeMinus"
-            i class="icon-minus-sign"
-          a href="#" class="fontSizePlus"
-            i class="icon-plus-sign"
+    nav
+      section.resizable.full
+        i class="icon-fire icon-large"
+        |  in case of fire, double-tap
+        a id="link-back" href=yield_content(:link_back)
+          i class="icon-arrow-left"
+        a id="link-forward" href=yield_content(:link_forward)
+          i class="icon-arrow-right"
     #content-scrollable.overthrow
       == yield
-    script document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
 

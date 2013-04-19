@@ -2,94 +2,42 @@
 - content_for(:link_forward, "story.html")
 
 
-- content_for(:head) do
-  == stylesheet_link_tag 'less/main-16px.css', 'laker/styles.css'
-
-.content-element
-iframe id="wandergranvik" src="wandergranvik/WanderGranvik.html" style="width: 100%; height: 640px"
-
-
-.content-element.intro.resizable
-  .full-column
+section.full
+  article
+    h1
+      | The Exquisite Prometheus
     h2
-      | The Art Of: CoalFather
+      | by 
+      a#johnbavaro.popover
+        | John Bavaro
     p
-      | Coalfather Industries represents a shared vision between artists Kara Jansson and Craig Newsom. The character of The Coalfather–developed during an online chat–infuses and informs their collaboration. The Coalfather is a once sleeping demon aroused into a New Morning by the subconscious chorus of a civilization hellbent on consumption, convenience and corn syrup. It is this ribald and roguish spirit of The Coalfather that becomes a lens through which our world is viewed.
+      | I’ve always thought that the word, “collaboration,” was not really professional.  It seems as though it’s one of those concepts that works in theory but not in practice.  In the past, I’ve engaged in collaborative gestures that were always not quite what I was after.  It seems as though the idea is there but when people work together, they have a problem synthesizing an idea.  What happens is that the idea gets watered down and people, very good artists, get wishy washy results.
+    p 
+      | I’ve always shied away from these projects which were good in theory, but not in practice. The number of artists was a risk for me because we were working virtually across email with one artist’s responding to another. But that all changed when I started to work with other people who were in a community of like-minded artists who were truly experiencing something shared across long distances and it was like that reticence I felt about collaborative ventures dissolves.
+    
+    p
+      | It was with this spirit that I gladly approached my colleagues, and asked them to collaborate with me in a series of shared works for display in the exhibition “Stylectrical: Design That Has Made History” Museum für Kunst und Gewerbe/Hamburg, Germany.  
+    
+    p
+      | I chose a top crew of artists whom I respected because of their unique vision and their work ethic.  Gabriel Palacios is what I would call a visionary artist whose characters and surface patterns are engaging to a number of viewers. He designs interactive games, and he throws in his design sensitivity into his work. Craig Newsom is a painter and a college professor and a master of mixed media at Blackburn College. He was a logical choice due to his comical, spiritual figures, which defy classification and the symmetry in his designs.  
+    p
+      | Sal Narravo one of the best caricaturists in the Ipad, community and one of the best in the world.  His vision and his speed are top notch. I thought that I could work with these artists well.  
+    
+    p 
+      | What happened with the pieces was something unexpected.  I thought coming in that it might be a mess, and sometimes, it was!  But the overall result was something that was quite remarkable.  I got to see things about myself that I couldn’t have seen without the collaboration.  It was really unbelievable what I was getting out of each artist.  Each one was responding to the other in really sympathetic ways that seemed to be feeding off the other.  I remember getting back an iteration from an artist that was totally not what I thought it would be.  It was really surprising how each artist filtered his vision through other artists in a way that none of us could have seen happening. There was a collective genius about it.’’’’
+    
+    p 
+      | It seems as though I was sharing in something unprecedented.  I don’t think that the rest of us had done it much before.  It seems as though we were experiencing a new model of art, and it was very much about cooperation and collaboration as a new working model that had new rules.
 
-.content-element.resizable
-  .full-column
-    p
-      | CoalFather goes on answering 
-      a href="#" id="the-five-nimble-qs" class="info-popover"
-        | The 5 Nimble Q's
-        i class="icon-fire" style="color: #fff; padding-left: 5px"
-      | :
-    p
-      b
-        | Why? 
-      | "Yes."
-  .full-column
-    p
-      b
-        | Where? 
-      | "Yes."
-  .full-column
-    p
-      b
-        | How? 
-      | "Yes."
-  .full-column
-    p
-      b
-        | When? 
-      | "Yes."
-  .full-column
-    p
-      b
-        | Tips? 
-      | "Yes."
-    h2
-      | Gallery
-    p
-      | Enjoy some of the recent work of The CoalFather here. All 3d-characters were done on iPad using either 123D Sculpt or Creature.
-#imgscroll-content
-  #imgscroll-legend
-    p
-      | » Swipe for more pictures 
-  #imgscroll-imgs
-    #imgscroll-img.imgscroll-img
-      img src="images/portrait/piece-001.jpg"
-      .caption
-        p Closing Time | 1/4
-    #imgscroll-img.imgscroll-img
-      img src="images/portrait/piece-002.jpg"
-      .caption
-        p Peoria 1974 | 2/4
-    #imgscroll-img.imgscroll-img
-      img src="images/portrait/piece-003.jpg"
-      .caption
-        p Sport | 3/4
-    #imgscroll-img.imgscroll-img
-      img src="images/portrait/piece-004.jpg"
-      .caption
-        p Weggs | 4/4
-
-p.caption#disclaimer
-  | The CoalFathers work: 
-  == link_to "Web", 'http://www.coalfather.com?referrer=Baker'
-  | , 
-  == link_to "flickr", 'http://www.flickr.com/photos/coalfather?referrer=Baker'
-
-script src="javascripts/imgscroll.js" type="text/javascript"
 
 javascript:
   jQuery(document).ready(function($) {
-    $("#the-five-nimble-qs").popover({
+    $("#johnbavaro").popover({
       verticalOffset: 2,
       horizontalOffset: 200,
       content: "Five essential questions to cast a light on the motivation of 'why do I paint on a mobile device'. Makes the life of the editor easier as well."
     });
-    $("#the-five-nimble-qs").click(function(event) {
+    $("#johnbavaro").click(function(event) {
       event.preventDefault();
       event.stopPropagation();
       $("#the-five-nimble-qs").popover('show');

@@ -3,22 +3,12 @@
 - content_for(:link_forward, "portrait.html")
 
 
-- content_for(:head) do
-  == stylesheet_link_tag 'less/main-16px.css', 'laker/styles.css'
-
 img src="images/editorial/main.jpg" class="full"
 
-
-.content-element.resizable
-  .full-column
+section.resizable.full
+  article
     h1
       | Let's do it together
-
-.content-element.resizable
-  .medium-column.float-left
-    p
-      strong
-        | Now, this one took me a while
     p
       | This issue was planned for March, but as I was also working on the iPhone version at the same time, that meant I had to go through a lot of legacy code and content to make the two first issues work as well. But now TADAA: from this day on The Nimble Mag will also be available for the iPhone.
     p
