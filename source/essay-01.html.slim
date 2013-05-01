@@ -1,0 +1,27 @@
+- content_for(:link_back, "editorial.html")
+- content_for(:link_forward, "essay-02.html")
+- content_for(:body_class, "frame")
+
+
+section.parallaxed
+  audio id="html5-audio" controls="controls" loop="loop"
+    source src="images/parallax/birds.mp3"
+  #wrapper
+    #scroller
+      .parallax-background data-stellar-ratio="0.5"
+      .parallax-midground data-stellar-ratio="0.97"
+      .parallax-foreground data-stellar-ratio="1"
+      .parallax-cu data-stellar-ratio="2.5"
+
+section.full
+  article
+    h1
+      | Bunny & The Beardman
+    p
+      | Collaboration with Fabric Lenny. Don't forget to swipe.
+        
+  script src="javascripts/iscroll.js"
+  script src="javascripts/jquery-1.7.1.min.js"
+  script src="javascripts/jquery.stellar.min.js"
+  script src="javascripts/parallax-init.js"
+
