@@ -1,6 +1,6 @@
 - content_for(:link_back, "#")
 - content_for(:link_forward, "editorial.html")
-
+- content_for(:body_class, "index")
 
 #logo-title
   #logo
@@ -11,13 +11,13 @@
 
 
 #content-title.overthrow
-  section.resizable.full
+  section
     p.caption
       i class="icon-fire icon-large" style="color: red; padding-right: 5px"
       |  in case of fire, double-tap
     == partial(:content, :locals => {:on_web => false, :issue_path => false})
   
-  section.resizable.full
+  section
     p.caption#disclaimer
       |  Cover artwork by 
       == link_to 'Fabric Lenny', 'http://www.fabriclenny.com?referrer=Baker'
@@ -27,12 +27,14 @@
       | ,  
       == link_to 'animate', 'http://daneden.me/animate/?referrer=Baker'
       | ,  
-      == link_to 'The Laker Compendium', 'http://www.lakercompendium.com?referrer=Baker'
-      | ,  
       == link_to 'Middleman', 'http://www.middlemanapp.com?referrer=Baker'
       | ,  
       == link_to 'jquery.popover', 'https://github.com/klaas4/jQuery.popover?referrer=Baker'
-      | ,    
+      | ,  
+      == link_to 'flexslider', 'https://github.com/woothemes/flexslider?referrer=Baker'
+      | ,  
+      == link_to 'stellar.js', 'https://stellar.js?referrer=Baker'
+      | ,
       == link_to 'FontAwesome', 'http://fortawesome.github.com?referrer=Baker'
       |  and 
       == link_to 'Google Web Fonts', 'http://www.google.com/webfonts?referrer=Baker'

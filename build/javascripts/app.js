@@ -1,12 +1,20 @@
 (function() {
 
   window.addEventListener("focus", (function() {
-    return $("#logo-title #logo").addClass("animated tada");
+    $("#logo-title #logo").addClass("animated tada");
+    return $("#html5-audio")[0].play();
   }), true);
 
   window.addEventListener("blur", (function() {
-    $("#logo-title #logo").removeClass("animated tada");
-    return $("#html5-video")[0].pause();
+    return $("#logo-title #logo").removeClass("animated tada");
+  }), true);
+
+  window.addEventListener("blur", (function() {
+    return $("#html5-audio").removeAttr("autoplay");
+  }), true);
+
+  window.addEventListener("blur", (function() {
+    return $("#html5-audio")[0].pause();
   }), true);
 
 }).call(this);

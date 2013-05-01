@@ -18,7 +18,10 @@ body
   h1
     font-size: 3em
     margin: $font-base-size/2 0
-
+  &.frame
+    background: #1a1a1a
+    *
+      color: #666!important
 
 
 // top navigation bar
@@ -66,6 +69,8 @@ nav
     font-family: Open Sans
     font-size: 0.9em
     line-height: 1.5em
+    a
+      color: #fff
 .info-popover
   text-decoration: none
   color: #fff
@@ -84,18 +89,19 @@ section
   +shift(1)
   +row
   +pad(10px 0 20px 0)
-  
+  #content-title &
+    +shift(0)
+    ul
+      padding: 0
+      li h4
+        font-size: 1.5em
+        margin: 0.8em 0
   aside
     +span-columns(11)
   img
     width: 100%
     border: 1px solid #ccc
 
-  &.intro
-    font-size: 0.9em
-    font-style: italic
-    color: #666
-    paddingtop: 0
   
   &.slideshow
     +shift(1)
@@ -153,27 +159,32 @@ section
     +omega
     position: relative
     box-shadow: 0 0 3px 1px hsla(0, 0%, 0%, 0.85)
-    height: 400px // specific value, must relate to artwork
+    border-top: 50px solid #000
+    border-bottom: 50px solid #000
+    height: 500px // specific value, must relate to artwork
     +media($iphone)
-      height: 200px
-    .parallax-background, .parallax-foreground, .parallax-cu
-      width: 4000px
+      height: 280px
+    .parallax-background, .parallax-foreground, .parallax-cu, .parallax-midground
+      width: 8400px
       height: 400px
       position: absolute
       background-size: contain
       top: 0px
-      left: 0px
+      left: -200px
       +media($iphone)
         height: 200px
     .parallax-background
       background: url(../images/parallax/bg.jpg) top left
     .parallax-foreground
       background: url(../images/parallax/fg.png) top left
-      width: 8000px
+      width: 16000px
+    .parallax-midground
+      background: url(../images/parallax/mg.png) top left
+      width: 16000px
     .parallax-cu
       background: url(../images/parallax/cu.png) top left repeat-x
-      opacity: 0.6
-      width: 20000px
+      opacity: 1
+      width: 40000px
     #wrapper
       position: absolute
       top: 0
@@ -182,9 +193,11 @@ section
       width: 100%
     #scroller
       height: 400px
-      width: 4000px
+      width: 15000px
       +media($iphone)
         height: 200px
+    audio
+      opacity: none
       
   h1
     +omega
@@ -256,9 +269,10 @@ section
     #nimble
       font-size: 8em
       line-height: 0.3em
-      color: #54531b
+      color: #fff
       z-index: 10000
-    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93,-2px 1px #cdd2d5, -2px 3px #808d93,-3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5
+    color: #FFFFFF
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15)
     @media only screen and (max-device-width: 320px) and (orientation:portrait)
       left: 90px
       top: 40px
@@ -267,7 +281,7 @@ section
       #the
         font-size: 1.5em
     #the
-      color: red
+      color: #eaeaea
       font-size: 3em
       position: absolute
       top: -30px
@@ -302,3 +316,11 @@ section
       border-top: 0px solid lighten($c-spot, 90%)
     a
       text-decoration: none
+
+
+.intro
+  font-size: 0.9em
+  font-style: italic
+  color: #666
+  paddingtop: 0
+  

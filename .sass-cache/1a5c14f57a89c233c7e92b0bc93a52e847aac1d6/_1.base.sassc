@@ -1,10 +1,10 @@
 3.2.1 (Media Mark)
-8cc0ee99296dd66a8ff6054e4643b05cf33dc9c0
-o:Sass::Tree::RootNode	:@template">!@import "bourbon"
+f12ffb88fb6c39a041cccf79cde6dd479fad748c
+o:Sass::Tree::RootNode	:@template";!@import "bourbon"
 @import "neat/neat"
 
 $c-base: #fff
-$c-spot: #341e06
+$c-spot: #000
 $base-gap: 10px
 $nav-height: 34px
 
@@ -352,7 +352,7 @@ greeniÿ;@:@value0;@o;;	@	;[ ;
 i
 ;0;"c-spot;o;	;
 i
-;{	;i;i;i9;i#;@;0;@o;;	@	;[ ;
+;{	;i ;i;i ;i ;@;0;@o;;	@	;[ ;
 i;0;"base-gap;o:Sass::Script::Number:@denominator_units[ ;
 i:@numerator_units["px;@:@original"	10px;i;@o;;	@	;[ ;
 i;0;"nav-height;o;;[ ;
