@@ -1,108 +1,47 @@
 - content_for(:link_back, "essay-01.html")
-- content_for(:link_forward, "essay-03.html")
+- content_for(:link_forward, "gear.html")
 - content_for(:body_class, "")
 
-img src="images/essay-02/essay01.jpg" class="full"
+img src="images/essay-02/header.jpg" class="full"
 
 section.full
   article
     h1
-      | Paint, Fold, Animate
+      | How to
     h3
-      | a small recipe for kids fun
+      | create perspective drawings
     
     p.intro
-      | Tablets are fantastic devices to get creative with kids. This little recipe shows you how to combine data and paper to create a great experience and creative fun. Photos show examples of a workshop run at the VHS-Hamburg/Farmsen.
+      | Using the rules of linear perspective can create powerful artwork. This tutorial shows you how to get started quickly. DISCLAIMER: 'perspective for artists' is an offspring of The Nimble Magazine.
+    
+    p
+      | Reading the rules of perspective is a quite good way to fall asleep, they read like:
+    ol
+      li
+        | All straight lines in space project to straight lines (or points, if end on) in the picture plane.
+      li
+        | The projections of all lines that are parallel in space either remain parallel in the picture plane or intersect at a single vanishing point.
+      li
+        | …snore…
+    p.intro
+      | Source: 
+      a href="http://www.ski.org/CWTyler_lab/CWTyler/Art%20Investigations/PerspectiveRules/PerspectiveRules.html"
+        | The Rules of Perspective
+    p
+      | If you really want to understand perspective, you should eventually read that post or any other book about the matter. But to bootstrap and to get you started quickly, here's what you could do.
     
     h3
-      | Ingredients
-    ul
-      li
-        a href="itms://itunes.apple.com/de/app/drawing-with-carl/id480645514?mt=8"
-          | Drawing with Carl
-        |  (or any painting app that has a mirror mode)
-      li
-        a href="itms://itunes.apple.com/de/app/foldify/id527118971"
-          | Foldify
-      li
-        a href="itms://itunes.apple.com/de/app/stop-motion-studio/id441651297"
-          | Stop Motion Studio
-        |  (or a similar stop motion app)
-      li
-        | paper, min 180g/qm
-      li
-        | a printer
-      li
-        | glue, scissors, cutting mat
-        
-    h3
-      | Step 1: Paint the characters
-      
+      | Step 1: Create a prespective grid
     p
-      | In this case, the overall theme was monsters. A group of 8 pupils aged 9-14 started off by creating their own set of characters. We used 
-      a href="itms://itunes.apple.com/de/app/drawing-with-carl/id480645514?mt=8"
-        | Drawing with Carl
-      |  for its simple, yet nice features like mirror mode and pattern roller. At this point the kids built groups of two and already started thinking of a storyline.
-
-section.slideshow
-  article
-    .flexslider
-      ul.slides
-        li
-          img src="images/essay-02/monster01.png"
-        li
-          img src="images/essay-02/monster02.png"
-        li
-          img src="images/essay-02/monster03.png"
-
-section.full
-  article
-    h3
-      | Step 2: getting 3-dimensional
-    p
-      | Since we wanted to create a stop motion movie with real puppet like characters, we now started using our next app, 
-      a href="itms://itunes.apple.com/de/app/foldify/id527118971"
-        | Foldify
-      | . This handy app lets you paint on ready-to-use 3d figures. In this case we imported our previously created monsters via the photo library and only added some details. Once done, you can print the model directly or send an email with a pdf to somebody you know and who has a printer.
-  aside
-    img src="images/essay-02/foldify.jpg"
-
-section.full
-  article
-    h3
-      | Step 3: Cut, fold and glue
-    p
-      | Now it's time to get your hands off the screen. And that's the beauty of this process, it very naturally combines material and data to quickly create something new.
-  aside
-    img src="images/essay-02/essay02.jpg"
-
-section.full
-  article
-    h3
-      | Step 4: it's time to animate!
-    p
-      | Now that we have our full cast produced, and also made up our mind about a storyline (which could be anything from a new take on romeo&juliet to a completely made-up thing), it's time to fire up 
-      a href="itms://itunes.apple.com/de/app/stop-motion-studio/id441651297"
-        | Stop Motion Studio
-      | . Stop motion animation basically means shooting a lot of single photos and then play them back with a speed of at least 12 shots per second. This might be the hardest part, since you really have to think about how a character or an object (e.g. a car) moves, how it stops, and maybe for how long it doesn't do anything at all. 
+      | A perspective grid basically looks like this:
+      br
+      img src="images/essay-02/2point.png"
+      | Bunch of lines. Since this is a 2-point- perspective grid, it's even two bunches of lines. I created this grid using an app called 'perspective for artists'. Here's a little video that shows you how it works:
     aside
-      img src="images/essay-02/essay03.jpg"
-
-section.full
-  article
+    <video id="html5-video" width="100%" height="470px" poster="images/essay-02/video.png" controls>
+      source src="images/essay-02/perspective-movie.m4v" type="video/mp4"
+    </video>
     h3
-      | Step 5: adding sound
+      | Step 2: Import your grid into your favourite painting app
     p
-      | Once you're done shooting, you can review your movie and check if speed is right, or if you missed something. No worries, you can always add more shots in between, or duplicate single frames to stretch certain parts of your film. The last step is to add a sound track to it: for this you can use anything you find and of course also your own voices. Here's a little example.
-    aside
-      <video id="html5-video" width="100%" height="360px" poster="images/essay-02/video.png" controls>
-        source src="images/essay-02/foldify_animation_during_kids_workshop_640x360.mp4" type="video/mp4"
-      </video>
-
-
-javascript:
-  jQuery(document).ready(function($) {
-      $('.flexslider').flexslider({
-        animation: "slide"
-      });
-  });
+      | That video already showed you the basic process: so now it's time to import your grid into your painting app of choice.

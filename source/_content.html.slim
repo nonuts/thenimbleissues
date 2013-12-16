@@ -1,49 +1,41 @@
 - content_for(:hide_nav, "yes")
 
-
 ul#content.overthrow
   li.issue
     - if on_web == true
       h2
-        | 005: Get Paducated
+        | 006
     -else
       h3
         a href="content.html"
-          | 005: Get Paducated
+          | 006
   li
     a href="#{issue_path ? issue_path : ''}editorial#{on_web == true ? '-short' : ''}.html"
       h4
-        | Editorial
+        | 006.1 
       p
-        | Merci, thanks, danke
+        | Editorial
   li
     a href="#{issue_path ? issue_path : ''}essay-01#{on_web == true ? '-short' : ''}.html"
       h4
-        | Teach?
+        | 006.2
       p
-        | by Susan Murtaugh
+        | The Art of LeBlanc
 
   li
     a href="#{issue_path ? issue_path : ''}essay-02#{on_web == true ? '-short' : ''}.html"
       h4
-        | Paint, Fold, Animate
+        | 006.3
       p
-        | a small recipe for kids fun
-
-  li
-    a href="#{issue_path ? issue_path : ''}essay-03#{on_web == true ? '-short' : ''}.html"
-      h4
-        | Interactive Storytelling
-      p
-        | by Heike Roegler
+        | How to create perspective paintings
   li
     a href="#{issue_path ? issue_path : ''}gear#{on_web == true ? '-short' : ''}.html"
       h4
-        | New Gear
+        | 006.4
       p
-        | New Apps and Updates
+        | New Gear
   li.issue
     - unless on_web == true
       h3
        a href="next.html"
-        | 006: The Big Shots
+        | 007
