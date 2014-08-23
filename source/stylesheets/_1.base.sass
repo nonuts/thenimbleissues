@@ -117,7 +117,7 @@ body#bare
     background: rgba(0,0,0,0)
     padding: $base-gap*8 0 0
     margin-left: 0
-    +box-shadow(rgba(0,0,0,0) -2px 2px 5px)
+    box-shadow: rgba(0,0,0,0) -2px 2px 5px
     border-left: 1px solid rgba(255,255,255,0)
     border-top: 1px solid rgba(255,255,255,0)
     border-bottom: 1px solid rgba(155,155,155,0.1)
@@ -180,7 +180,7 @@ body#bare
   margin: 0
   height: 343px
   width: 100%
-  +box-shadow(1px 0px 3px #999)
+  box-shadow: 1px 0px 3px #999
   border-bottom: 1px solid #000
   opacity: 0.9
   -webkit-animation-name: logoTitle
@@ -196,7 +196,7 @@ body#bare
     width: 320px
     margin-top: 0px
     height: 116px
-    +background-size(100%)
+    background-size: 100%
   #logo
     +animation(logoTitleLogo 15s ease-out 1 alternate forwards 0s)
     position: absolute
@@ -335,7 +335,7 @@ nav
   @media only screen and (max-device-width: 1024px) and (orientation:landscape)
     min-height: 744px
   img
-    +box-shadow(#000 0px 0px 3px)
+    box-shadow: #000 0px 0px 3px
     max-height: 70%
     max-width: 90%
   p
